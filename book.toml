@@ -1,0 +1,6 @@
+[book]
+authors = ["AddonScript Team", "Timo Ley"]
+language = "en"
+multilingual = false
+src = "docs"
+title = "AddonScript"
