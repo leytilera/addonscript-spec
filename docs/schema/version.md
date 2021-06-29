@@ -14,7 +14,7 @@
 
 ### version
 
-This is the version number of this version. It should follow [Maven version naming conventions](https://docs.oracle.com/middleware/1212/core/MAVEN/maven_version.htm), 
+This is the version number of this version. It should follow [maven version naming conventions](https://docs.oracle.com/middleware/1212/core/MAVEN/maven_version.htm), 
 as they are used to comparing versions.
 
 ## Optional properties
