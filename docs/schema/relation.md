@@ -12,7 +12,7 @@
 
 ### id
 
-This is the ID or namespaced ID of the addon, this relation refers to. 
+This is the ID or namespaced ID of the addon this relation refers to. 
 
 ### version
 
@@ -23,5 +23,5 @@ This is a [maven version range](https://maven.apache.org/enforcer/enforcer-rules
 ### flags
 
 This is an array of [flags](../flags.md) for this relation. If this property is not present in a relation object, the relation
-will have the flags, which are set as default for relations or, if no default was set, it will inherit the flags from the
-associated version, which are applicable for relations.
+will have the flags which are set as default for relations or, if no default was set, it will inherit the flags
+which are applicable for relations from the associated version.
