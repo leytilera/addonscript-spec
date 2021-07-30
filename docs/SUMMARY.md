@@ -14,5 +14,5 @@
 
 # Concepts
 - [Installing](install.md)
-
+- [Flags](flags.md)
 
