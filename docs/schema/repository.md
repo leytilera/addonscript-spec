@@ -16,7 +16,7 @@ This is the ID of the repository. It has to be unique to the AddonScript file.
 
 ### type
 
-This is the type of the repository. Possible values are ```api``` or ```maven```.
+This is the type of the repository. Possible values are `api` or `maven`.
 
 ### link
 
