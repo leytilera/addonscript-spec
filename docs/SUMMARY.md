@@ -15,4 +15,9 @@
 # Concepts
 - [Installing](install.md)
 - [Flags](flags.md)
+- [URLs](url.md)
+
+#Packaging
+- [Packaging](packaging/README.md)
+    - [Zip-based Packaging](packaging/zip.md)
 

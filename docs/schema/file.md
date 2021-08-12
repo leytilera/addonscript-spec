@@ -24,7 +24,7 @@ in which case the next one will be used as a fallback.
 
 ### url
 
-This is URL, which points to the actual file. The URL can have one of the schemes listed [here](../schemes.md).
+This is an [URL](../url.md), which points to the actual file. 
 
 ### install
 
