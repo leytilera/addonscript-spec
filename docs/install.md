@@ -27,6 +27,18 @@ the given location as working directory. A client should inform the user before 
 ask them for permission to do so and/or it should execute the jar in a closed environment like a container
 to prevent malicous code from running.
 
+### launch
+`launch`
+
+`launch` can be used to mark the selected file as the launch file for a specific side. Files having this
+install step can only have the `client` or the `server` flag, not both. If the file is client-sided, it
+has to be a [client JSON file](https://minecraft.fandom.com/wiki/Client.json) as specified by Minecraft
+itself. If it is server-sided. it has to be a jar file, which is the file, that should be launched to start
+the server. The jar file has to be moved to the root of the instance directory, before using `launch` on it.
+Moreover, this install step may only be used with instance addons and there may be only one file for each
+side, which has this install step, except all of them are marked as `optional`, in which case they are also 
+implicitly marked as incompatible.
+
 ### select
 `select [filename]`
 
