@@ -24,21 +24,7 @@ or [files](schema/file.md).
 than any relation or file, which has this flag set, also has to be installed.
 - `optional` This flag specifies, that the related addon or file is optional for this addon. If the addon gets installed,
 the user should be able to choose, whether he wants to install the relation or file with this flag, or not. This flag
-can be used in combination with the following additional flags.
-
-### Additional flags
-
-These are flags, which can be used in combination with the `optional` flag.
-
-- `require <addon id>` This flag specifies, that the relation or file requires the addon `<addon id>` to be installed.
-- `companion <addon id>` This flag specifies, that the relation or file requires the addon `<addon id>` to be installed
-and has to be installed, if the addon `<addon id>` is installed. In contrast to `require`, this is a two-way dependency.
-- `exclude <addon id>` This flag specifies, that the relation or file can't be installed together with the addon `<addon id>`. 
-
-With all these flags, `<addon id>` has to be an addon, which is defined as a [relation](schema/relation.md).
-As long as there is just one addon with the id `<addon id>` defined as a relation, the namespace may be omitted
-here, even if it is defined with a namespace in the relation section. Otherwise, it is required, to also
-specify the namespace here.
+can be used in combination with the [conditions](schema/conditions.md) property.
 
 ### Relation specific
 

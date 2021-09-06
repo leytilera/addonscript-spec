@@ -1,26 +1,31 @@
 # File installing
 
-## Install steps
+## Install commands
 
 ### move
-`move [location]`
+args:
+- `[location]`
 
 `move` is simplest install step of all. It just moves the selected file to 
 the given location.
 
 ### extract
-`extract [location]`
+args:
+- `[location]`
 
 `extract` can be used with zip files, to extract the contents of the zip file
 to the given location.
 
 ### rename
-`rename [new name]`
+args:
+- `[new name]`
 
 `rename` renames the selected file to the new given filename.
 
 ### execute
-`execute [location] [arguments]`
+args:
+- `[location]`
+- `[jar arguments]`
 
 `execute` can be used with an executable jar file. The jar file will be executed with the given arguments and 
 the given location as working directory. A client should inform the user before just executing the file and
@@ -28,7 +33,6 @@ ask them for permission to do so and/or it should execute the jar in a closed en
 to prevent malicous code from running.
 
 ### launch
-`launch`
 
 `launch` can be used to mark the selected file as the launch file for a specific side. Files having this
 install step can only have the `client` or the `server` flag, not both. If the file is client-sided, it
@@ -40,7 +44,8 @@ side, which has this install step, except all of them are marked as `optional`, 
 implicitly marked as incompatible.
 
 ### select
-`select [filename]`
+args:
+- `[filename]`
 
 `select` is used to select the file with the given file name for other installation steps.
 The file name can also be a relative path, if the file is not directly in the Minecraft directory.

@@ -4,7 +4,8 @@
 {
   "id": "namespace:othermod",
   "version": "[1.0,)",
-  "flags": []
+  "flags": [],
+  "conditions": {}
 }
 ```
 
@@ -25,3 +26,7 @@ This is a [maven version range](https://maven.apache.org/enforcer/enforcer-rules
 This is an array of [flags](../flags.md) for this relation. If this property is not present in a relation object, the relation
 will have the flags which are set as default for relations or, if no default was set, it will inherit the flags
 which are applicable for relations from the associated version.
+
+### conditions
+
+This is a [conditions object](conditions.md). It can only be used, if the [optional flag](../flags.md) was set.

@@ -5,10 +5,9 @@
   "id": "modfile",
   "url": "https://example.com/mymod.jar",
   "flags": [],
-  "install": [
-    "move mods"
-  ],
-  "sha1": "somesha1checksum"
+  "install": [],
+  "sha1": "somesha1checksum",
+  "conditions": {}
 }
 ```
 
@@ -28,8 +27,8 @@ This is an [URL](../url.md), which points to the actual file.
 
 ### install
 
-This is an array of [install steps](../install.md). They describe how the file should be installed to the game.
-The order in the array corresponds to the order in which the install steps should be applied.
+This is an array of [install objects](install.md). They describe how the file should be installed to the game.
+The order in the array corresponds to the order in which the installation steps should be applied.
 
 ## Optional properties
 
@@ -42,3 +41,7 @@ associated version, which are applicable for files.
 ### sha1
 
 This is the sha1 checksum of the file. Although the checksum is optional, it is recommended to use it.
+
+### conditions
+
+This is a [conditions object](conditions.md). It can only be used, if the [optional flag](../flags.md) was set.
