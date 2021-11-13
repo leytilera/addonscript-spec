@@ -14,11 +14,12 @@
 
 ### id
 
-This is the ID or namespaced ID of the addon this relation refers to. 
+This is the ID or namespaced ID of the addon this relation refers to.
 
 ### version
 
 <!--TODO: update link one PR is merged-->
+
 This is a [semver version range](https://github.com/semver/semver/pull/584) of supported versions of this relation.
 
 ## Optional properties

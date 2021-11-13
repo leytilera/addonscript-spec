@@ -1,6 +1,6 @@
 # Addon Object
 
-``` json
+```json
 {
   "addonscript": {},
   "id": "myaddon",
@@ -28,7 +28,7 @@ It should be written in the `kebab-case` format, meaning lowercase only and usin
 
 ### version
 
-This is the version number of this version. It must follow [semver versioning specifications](https://semver.org/spec/v2.0.0.html), 
+This is the version number of this version. It must follow [semver versioning specifications](https://semver.org/spec/v2.0.0.html),
 as they are used to compare versions.
 
 ## Optional properties
@@ -48,7 +48,7 @@ This is an array of [relation objects](relation.md) which represent addons in re
 ### flags
 
 This is an array of [flags](../flags.md) for this version.
- 
+
 ### repositories
 
 This is an array of [repository objects](repository.md). Each repository object defines one repository from which files or

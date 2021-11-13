@@ -79,6 +79,7 @@ cannot be referenced, as only addon-ids are used.
 </td>
 <td>
 
+<!-- prettier-ignore -->
 ```json
 {
   "companion": [

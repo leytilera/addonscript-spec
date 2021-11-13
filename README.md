@@ -4,9 +4,9 @@ This repository contains the AddonScript specification.
 
 ## What is AddonScript?
 
-AddonScript is a format to distribute Minecraft addons. An addon could be anything, which is installed 
+AddonScript is a format to distribute Minecraft addons. An addon could be anything, which is installed
 into the Minecraft game, like a mod, modpack, modloader, texturepack or even a world.
-AddonScript can be used for example to define how addons are installed, or to specify dependencies 
+AddonScript can be used for example to define how addons are installed, or to specify dependencies
 for addons. This way, addon creators just have to publish the AddonScript file for their addon and let
 AddonScript compatible tools (for example launchers) install them.
 
@@ -23,7 +23,7 @@ contribute ideas to the AddonScript specification.
 AddonScript depends on nothing, except Minecraft itself (and Java). This means that the specification
 does not depend on existing APIs and formats like Curseforge. It also does not reference any specific
 modloader like Forge or Fabric, instead they are themselves addons, which can be defined using AddonScript.
-This means, that AddonScript is not bound to a specific set of modloaders, instead you can use any 
+This means, that AddonScript is not bound to a specific set of modloaders, instead you can use any
 modloader.
 
 ### Universal

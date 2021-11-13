@@ -1,6 +1,6 @@
 # File Object
 
-``` json
+```json
 {
   "id": "modfile",
   "url": "https://example.com/mymod.jar",
@@ -19,13 +19,14 @@ This is the ID of the file.
 It should be written in the `kebab-case` format, meaning lowercase only and using `-` instead of spaces.
 
 <!--TODO: error if there are multiple relations with the same id and allow multiple urls-->
+
 If multiple file objects in the same array have the same ID, they are treated as the same file,
 which means that the first one of them in the array will be used unless it can't be retrieved from the URL,
 in which case the next one will be used as a fallback.
 
 ### url
 
-This is an [URL](../url.md), which points to the actual file. 
+This is a [URL](../url.md), which points to the actual file.
 
 ### install
 

@@ -20,7 +20,7 @@ This is the type of the repository. Possible values are [`api`](../repository/ap
 
 ### url
 
-This is the base URL of the repository. While other URLs in AddonScript can have different schemes, 
-the base URL has to be a http(s) URL, except for `index` and `maven` repositories, where it can also be `file`. 
+This is the base URL of the repository. While other URLs in AddonScript can have different schemes,
+the base URL has to be a http(s) URL, except for `index` and `maven` repositories, where it can also be `file`.
 If it is a maven repository the scheme can also be `file`, where
 it points to a directory, which contains the maven repository.
