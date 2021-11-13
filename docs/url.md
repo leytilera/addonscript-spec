@@ -18,7 +18,7 @@ In this example `com.example` it the namespace of the artifact, `someartifact` i
 `mvn://com.example/someartifact/1.0.jar` would also be a valid URL without an optional specifier.
 
 ## file
-```file://relative/path/to/file.jar```
+```./relative/path/to/file.jar```
 
-This URL scheme is a relative path to a file. It can only be used with [packaging](packaging/README.md)
+This is a relative path to a file. It can only be used with [packaging](packaging/README.md)
 or in some third-party environments, which are not covered by this specification.

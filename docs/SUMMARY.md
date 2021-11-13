@@ -5,17 +5,18 @@
 # Schema
 - [Addon Object](schema/root.md)
     - [AddonScript Object](schema/addonscript.md)
-    - [Version Object](schema/version.md)
-        - [File Object](schema/file.md)
-        - [Relation Object](schema/relation.md)
+    - [File Object](schema/file.md)
+        - [Install Object](schema/install.md)
+    - [Relation Object](schema/relation.md)
+    - [Conditions Object](schema/conditions.md)
     - [Repository Object](schema/repository.md)
-    - [Index Object](schema/index.md)
     - [Meta Object](schema/meta.md)
 
 # Concepts
 - [Installing](install.md)
 - [Flags](flags.md)
 - [URLs](url.md)
+- [Namespaces](namespaces.md)
 
 # Packaging
 - [Packaging](packaging/README.md)

@@ -4,10 +4,12 @@
 {
   "addonscript": {},
   "id": "myaddon",
-  "versions": [],
+  "namespace": "com.example",
+  "version": "1.0",
+  "files": [],
+  "relations": [],
+  "flags": ["server", "client"],
   "repositories": [],
-  "index": {},
-  "flags": {},
   "meta": {}
 }
 ```
@@ -20,28 +22,35 @@ This is an [AddonScript object](addonscript.md) containing information about the
 
 ### id
 
-This is the ID of your addon. It should only contain **lowercase letters, numbers and dashes**.
+This is the ID of the addon. It should only contain **lowercase letters, numbers and dashes**.
+
+### version
+
+This is the version number of this version. It must follow [semver version naming conventions](https://semver.org/spec/v2.0.0.html), 
+as they are used to compare versions.
 
 ## Optional properties
 
-### versions
+### namespace
 
-This is an array of [version objects](version.md). It is possible to define multiple versions of the addon in one AddonScript file,
-but in the most cases there should be just one version per file. Athough this property is optional, as you can define versions
-in the [index](index.md), it can be used to define a list of versions, which can be found in the index.
+This is the namespace of the addon. 
+
+### files
+
+This is an array of [file objects](file.md) including the files belonging to this version.
+
+### relations
+
+This is an array of [relation objects](relation.md) which represents related addons.
+
+### flags
+
+This is an array of [flags](../flags.md) for this version.
  
 ### repositories
 
 This is an array of [repository objects](repository.md). Each repository object defines one repository from which files or
 addons can be retrieved.
-
-### index
-
-This is an [index object](index.md) which includes links to other versions of this addon, or to other related addons.
-
-### flags
-
-Not yet specified
 
 ### meta
 
