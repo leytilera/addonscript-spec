@@ -3,31 +3,39 @@
 ## Install commands
 
 ### move
+
 args:
+
 - `[location]`
 
-`move` is simplest install step of all. It just moves the selected file to 
+`move` is simplest install step of all. It just moves the selected file to
 the given location.
 
 ### extract
+
 args:
+
 - `[location]`
 
 `extract` can be used with zip files, to extract the contents of the zip file
 to the given location.
 
 ### rename
+
 args:
+
 - `[new name]`
 
 `rename` renames the selected file to the new given filename.
 
 ### execute
+
 args:
+
 - `[location]`
 - `[jar arguments]`
 
-`execute` can be used with an executable jar file. The jar file will be executed with the given arguments and 
+`execute` can be used with an executable jar file. The jar file will be executed with the given arguments and
 the given location as working directory. A client should inform the user before just executing the file and
 ask them for permission to do so and/or it should execute the jar in a closed environment like a container
 to prevent malicous code from running.
@@ -40,11 +48,13 @@ has to be a [client JSON file](https://minecraft.fandom.com/wiki/Client.json) as
 itself. If it is server-sided. it has to be a jar file, which is the file, that should be launched to start
 the server. The jar file has to be moved to the root of the instance directory, before using `launch` on it.
 Moreover, this install step may only be used with instance addons and there may be only one file for each
-side, which has this install step, except all of them are marked as `optional`, in which case they are also 
+side, which has this install step, except all of them are marked as `optional`, in which case they are also
 implicitly marked as incompatible.
 
 ### select
+
 args:
+
 - `[filename]`
 
 `select` is used to select the file with the given file name for other installation steps.
@@ -54,7 +64,7 @@ If no file name is given, the selection resets to the original file itself, also
 ## Locations
 
 Locations are specified as a relative path from the Minecraft directory to which the file should be installed.
-For example `./mods` would point to the mods directory of the Minecraft instance. 
+For example `./mods` would point to the mods directory of the Minecraft instance.
 
 ## Directories
 
