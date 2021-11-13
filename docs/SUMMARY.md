@@ -3,7 +3,7 @@
 - [AddonScript](README.md)
 
 # Schema
-- [Addon Object](schema/root.md)
+- [Addon Object](schema/addon.md)
     - [AddonScript Object](schema/addonscript.md)
     - [File Object](schema/file.md)
         - [Install Object](schema/install.md)

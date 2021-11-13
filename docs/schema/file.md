@@ -15,8 +15,10 @@
 
 ### id
 
-This is the ID of the file. It should only contain **lowercase letters, numbers and dashes**.
+This is the ID of the file.
+It should be written in the `kebab-case` format, meaning lowercase only and using `-` instead of spaces.
 
+<!--TODO: error if there are multiple relations with the same id and allow multiple urls-->
 If multiple file objects in the same array have the same ID, they are treated as the same file,
 which means that the first one of them in the array will be used unless it can't be retrieved from the URL,
 in which case the next one will be used as a fallback.
@@ -34,13 +36,11 @@ The order in the array corresponds to the order in which the installation steps 
 
 ### flags
 
-This is an array of [flags](../flags.md) for this file. If this property is not present in a file object, the file
-will have the flags which are set as default for files, or if no default was set, it will inherit the flags from the
-associated version, which are applicable for files.
+This is an array of [flags](../flags.md) for this file. If this property is not present in a file object, the file will use the default flags.
 
 ### sha1
 
-This is the sha1 checksum of the file. Although the checksum is optional, it is recommended to use it.
+This is the sha1 checksum of the file. Although the checksum is optional, it is recommended.
 
 ### conditions
 

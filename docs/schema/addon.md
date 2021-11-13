@@ -5,7 +5,7 @@
   "addonscript": {},
   "id": "myaddon",
   "namespace": "com.example",
-  "version": "1.0",
+  "version": "1.0.0",
   "files": [],
   "relations": [],
   "flags": ["server", "client"],
@@ -22,26 +22,28 @@ This is an [AddonScript object](addonscript.md) containing information about the
 
 ### id
 
-This is the ID of the addon. It should only contain **lowercase letters, numbers and dashes**.
+This is the ID of the addon.
+
+It should be written in the `kebab-case` format, meaning lowercase only and using `-` instead of spaces.
 
 ### version
 
-This is the version number of this version. It must follow [semver version naming conventions](https://semver.org/spec/v2.0.0.html), 
+This is the version number of this version. It must follow [semver versioning specifications](https://semver.org/spec/v2.0.0.html), 
 as they are used to compare versions.
 
 ## Optional properties
 
 ### namespace
 
-This is the namespace of the addon. 
+The namespace of the addon in a reverse-DNS format. Used to identify addons across repositories, if it is present.
 
 ### files
 
-This is an array of [file objects](file.md) including the files belonging to this version.
+This is an array of [file objects](file.md) including the files belonging to this addon.
 
 ### relations
 
-This is an array of [relation objects](relation.md) which represents related addons.
+This is an array of [relation objects](relation.md) which represent addons in relation to this one.
 
 ### flags
 
@@ -54,4 +56,4 @@ addons can be retrieved.
 
 ### meta
 
-This is a [meta object](meta.md).
+This is a [meta object](meta.md) containing metadata about the addon.
