@@ -15,11 +15,11 @@ as optional relations in this version.
 
 ### require
 
-This is an array of addons, which are required for this relation or file and must be present.
+This is an array of addon IDs, which are required for this relation or file and must be present.
 
 ### companion
 
-This is an array of file IDs which go together with this relation/file.
+This is an array of addon IDs which go together with this relation/file.
 This field is fairly complex.
 
 The `companion` field is used to represent a relation between an optional file/relation, and an optional relation.
@@ -151,4 +151,4 @@ Thus it will also be installed if the fabric version of the mod is used.
 
 ### exclude
 
-This is an array of addons, which can't be installed together with this relation or file.
+This is an array of addon IDs, which can't be installed together with this relation or file.
