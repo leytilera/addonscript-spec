@@ -5,7 +5,8 @@
   "addonscript": {},
   "id": "myaddon",
   "namespace": "com.example",
-  "version": "1.0.0",
+  "version": "1.0",
+  "semver": "1.0.0",
   "files": [],
   "relations": [],
   "flags": ["server", "client"],
@@ -28,10 +29,14 @@ It should be written in the `kebab-case` format, meaning lowercase only and usin
 
 ### version
 
-This is the version number of this version. It must follow [semver versioning specifications](https://semver.org/spec/v2.0.0.html),
-as they are used to compare versions.
+This is the version number of this version. Versions are compared by [Maven version order rules](../versioning.md#version-order-specification).
+If this version number is valid semver, the `semver` property is implicitly equal to `version` if it was not explicitly set.
 
 ## Optional properties
+
+### semver
+
+This is the version number of this version in semver format. It must follow the [semver versioning specifications](https://semver.org/spec/v2.0.0.html).
 
 ### namespace
 

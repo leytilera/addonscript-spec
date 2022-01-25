@@ -19,6 +19,7 @@
 - [Flags](flags.md)
 - [URLs](url.md)
 - [Namespaces](namespaces.md)
+- [Versioning](versioning.md)
 
 # Packaging
 

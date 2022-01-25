@@ -3,7 +3,7 @@
 ```json
 {
   "id": "namespace:othermod",
-  "version": "1.0",
+  "version": "[1.0]",
   "repositories": ["repo1"],
   "flags": [],
   "conditions": {}
@@ -16,13 +16,17 @@
 
 This is the ID or namespaced ID of the addon this relation refers to.
 
+## Optional properties
+
 ### version
 
-<!--TODO: update link one PR is merged-->
+This is a [maven version range](../versioning.md#dependancy-version-requirement-specification) that specifies, which versions
+of the related addon are targeted by this relation. You can either set this property or `semver`, but exactly one of them has to be set.
+
+### semver
 
 This is a [semver version range](https://github.com/semver/semver/pull/584) of supported versions of this relation.
-
-## Optional properties
+It will only allow versions of the related addon, which have a valid semver version number, which is in this range.
 
 ### repositories
 
