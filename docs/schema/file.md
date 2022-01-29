@@ -3,7 +3,7 @@
 ```json
 {
   "id": "modfile",
-  "url": "https://example.com/mymod.jar",
+  "link": "https://example.com/mymod.jar",
   "flags": [],
   "install": [],
   "sha1": "somesha1checksum",
@@ -24,9 +24,9 @@ If multiple file objects in the same array have the same ID, they are treated as
 which means that the first one of them in the array will be used unless it can't be retrieved from the URL,
 in which case the next one will be used as a fallback.
 
-### url
+### link
 
-This is a [URL](../url.md), which points to the actual file.
+This is a [link](../link.md), which points to the actual file.
 
 ### install
 

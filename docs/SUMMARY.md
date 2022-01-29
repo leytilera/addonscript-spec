@@ -17,7 +17,7 @@
 
 - [Installing](install.md)
 - [Flags](flags.md)
-- [URLs](url.md)
+- [Links](link.md)
 - [Namespaces](namespaces.md)
 - [Versioning](versioning.md)
 
