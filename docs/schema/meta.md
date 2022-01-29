@@ -10,7 +10,8 @@
     "website": "https://example.com",
     "source": "https://gitea.com/user/myaddon",
     "issues": "https://gitea.com/user/myaddon/issues",
-    "contributors": ["Alice", "Bob"]
+    "type": "mod",
+    "contributors": [{"name": "Alice", "email": "alice@example.com"}, {"name": "Bob", "email": "bob@example.com"}]
   },
   "version": {
     "changelog": "./CHANGELOG.md",
@@ -68,9 +69,13 @@ A URL to the source code of the addon.
 
 A URL to an issue tracker for the addon.
 
+### type
+
+The type of the addon, for example `mod`, `modpack` or `resourcepack`.
+
 ### contributors
 
-An array of people who have contributed to the addon.
+An array of people who have contributed to the addon. 
 
 # Version Meta Object
 
