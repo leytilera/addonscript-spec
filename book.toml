@@ -5,5 +5,8 @@ multilingual = false
 src = "docs"
 title = "AddonScript"
 
+[build]
+build-dir = "public"
+
 [output.html]
-git-repository-url = "https://tilera.xyz/git/AddonScript/addonscript-spec"
+git-repository-url = "https://git.tilera.org/AddonScript/addonscript-spec"
