@@ -10,15 +10,6 @@ to point to files.
 This link type is mostly self-explaining. It is just a simple http or https URL, which points to
 a file on a http server.
 
-## mvn
-
-`mvn://com.example/someartifact/1.0/core.jar`
-
-This link type is used, to point to a maven artifact. The link consists of multiple parts.
-In this example `com.example` it the namespace of the artifact, `someartifact` is the artifact ID,
-`1.0` is the version, `core` is an optional qualifier and `.jar` is the file ending.
-`mvn://com.example/someartifact/1.0.jar` would also be a valid link without an optional qualifier.
-
 ## file
 
 `./relative/path/to/file.jar`
