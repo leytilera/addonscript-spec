@@ -11,10 +11,10 @@
 
 ### command
 
-This is the [install command](../install.md), which should be used at this installation step.
+This is the [install command](../concepts/install.md), which should be used at this installation step.
 
 ## Optional properties
 
 ### args
 
-This is an array of arguments for the [install command](../install.md). Each of them takes other arguments.
+This is an array of arguments for the [install command](../concepts/install.md). Each of them takes other arguments.

@@ -1,1 +1,0 @@
-# Addon IDs and Namespaces

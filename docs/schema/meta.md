@@ -46,12 +46,12 @@ display to the user.
 
 ### icon
 
-A [link](../link.md) to the icon of the addon. This path should point to an image file of small resolution
+A [link](../concepts/link.md) to the icon of the addon. This path should point to an image file of small resolution
 which is ideally square. It can be dispayed to users in programs.
 
 ### description
 
-A [link](../link.md) to a description file for the addon. The file should be in CommonMark markdown.
+A [link](../concepts/link.md) to a description file for the addon. The file should be in CommonMark markdown.
 
 ### summary
 
@@ -83,7 +83,7 @@ An array of people who have contributed to the addon.
 
 ### changelog
 
-A [link](../link.md) to a changelog file for the addon.
+A [link](../concepts/link.md) to a changelog file for the addon.
 
 ### timestamp
 

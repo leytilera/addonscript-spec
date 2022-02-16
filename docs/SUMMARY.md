@@ -15,11 +15,11 @@
 
 # Concepts
 
-- [Installing](install.md)
-- [Flags](flags.md)
-- [Links](link.md)
-- [Namespaces](namespaces.md)
-- [Versioning](versioning.md)
+- [Installing](concepts/install.md)
+- [Flags](concepts/flags.md)
+- [Links](concepts/link.md)
+- [Namespaces](concepts/namespaces.md)
+- [Versioning](concepts/versioning.md)
 
 # Packaging
 

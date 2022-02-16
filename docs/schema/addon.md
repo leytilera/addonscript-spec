@@ -29,7 +29,7 @@ It should be written in the `kebab-case` format, meaning lowercase only and usin
 
 ### version
 
-This is the version number of this version. Versions are compared by [Maven version order rules](../versioning.md#version-order-specification).
+This is the version number of this version. Versions are compared by [Maven version order rules](../concepts/versioning.md#version-order-specification).
 If this version number is valid semver, the `semver` property is implicitly equal to `version` if it was not explicitly set.
 
 ## Optional properties
@@ -52,7 +52,7 @@ This is an array of [relation objects](relation.md) which represent addons in re
 
 ### flags
 
-This is an array of [flags](../flags.md) for this version.
+This is an array of [flags](../concepts/flags.md) for this version.
 
 ### repositories
 

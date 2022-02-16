@@ -20,7 +20,7 @@ This is the ID or namespaced ID of the addon this relation refers to.
 
 ### version
 
-This is a [maven version range](../versioning.md#dependancy-version-requirement-specification) that specifies, which versions
+This is a [maven version range](../concepts/versioning.md#dependancy-version-requirement-specification) that specifies, which versions
 of the related addon are targeted by this relation. You can either set this property or `semver`, but exactly one of them has to be set.
 
 ### semver
@@ -36,8 +36,8 @@ the namespace from all defined repositories.
 
 ### flags
 
-This is an array of [flags](../flags.md) for this relation. If this property is not present in a relation object, the relation will use the default flags.
+This is an array of [flags](../concepts/flags.md) for this relation. If this property is not present in a relation object, the relation will use the default flags.
 
 ### conditions
 
-This is a [conditions object](conditions.md). It can only be used, if the [optional flag](../flags.md) was set.
+This is a [conditions object](conditions.md). It can only be used, if the [optional flag](../concepts/flags.md) was set.

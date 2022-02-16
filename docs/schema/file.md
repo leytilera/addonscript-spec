@@ -22,7 +22,7 @@ The file ID has to be unique to this addon version.
 
 ### link
 
-This is an array of [links](../link.md), which are pointing to the actual file. All of these links must
+This is an array of [links](../concepts/link.md), which are pointing to the actual file. All of these links must
 have the same file type. Since AddonScript treats directories and zip files equally, 
 they can be mixed in the same link array. When downloading the file,
 the first link in this array should be used with the other links as fallback, if the first doesn't work.
@@ -39,7 +39,7 @@ The order in the array corresponds to the order in which the installation steps 
 
 ### flags
 
-This is an array of [flags](../flags.md) for this file. If this property is not present in a file object, the file will use the default flags.
+This is an array of [flags](../concepts/flags.md) for this file. If this property is not present in a file object, the file will use the default flags.
 
 ### sha1
 
@@ -47,7 +47,7 @@ This is the sha1 checksum of the file. Although the checksum is optional, it is 
 
 ### conditions
 
-This is a [conditions object](conditions.md). It can only be used, if the [optional flag](../flags.md) was set.
+This is a [conditions object](conditions.md). It can only be used, if the [optional flag](../concepts/flags.md) was set.
 
 ### maven
 
