@@ -28,6 +28,14 @@ args:
 
 `rename` renames the selected file to the new given filename.
 
+### inject
+
+`inject` can be used with zip or jar files, to inject the contents of that file
+into the server launch jar on server side or into the client jar on client side.
+In contrast to libraries, `inject` will not add that file to the classpath, but
+will also overwrite classes, which are already contained in the game jar, if they
+are also in injected file. 
+
 ### execute
 
 args:
