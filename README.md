@@ -1,6 +1,8 @@
 # AddonScript
 
-This repository contains the AddonScript specification.
+The official AddonScript specification is available in the master branch of the 
+[addonscript-spec](https://git.tilera.org/AddonScript/addonscript-spec) repository
+and on [docs.addonscript.org](https://docs.addonscript.org/).
 
 ## What is AddonScript?
 
