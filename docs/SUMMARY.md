@@ -2,6 +2,10 @@
 
 - [AddonScript](README.md)
 
+# API
+
+- [API](api/README.md)
+
 # Schema
 
 - [Addon Object](schema/addon.md)
