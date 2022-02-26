@@ -21,7 +21,7 @@
 
 - [Installing](concepts/install.md)
 - [Flags](concepts/flags.md)
-- [Links](concepts/link.md)
+- [Links](concepts/links.md)
 - [Namespaces](concepts/namespaces.md)
 - [Versioning](concepts/versioning.md)
 

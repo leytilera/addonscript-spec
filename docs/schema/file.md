@@ -22,7 +22,7 @@ The file ID has to be unique to this addon version.
 
 ### link
 
-This is an array of [links](../concepts/link.md), which are pointing to the actual file. All of these links must
+This is an array of [links](../concepts/links.md), which are pointing to the actual file. All of these links must
 have the same file type. Since AddonScript treats directories and zip files equally, 
 they can be mixed in the same link array. When downloading the file,
 the first link in this array should be used with the other links as fallback, if the first doesn't work.
