@@ -29,8 +29,9 @@ It should be written in the `kebab-case` format, meaning lowercase only and usin
 
 ### version
 
-This is the version number of this version. Versions are compared by [Maven version order rules](../concepts/versioning.md#version-order-specification).
-If this version number is valid semver, the `semver` property is implicitly equal to `version` if it was not explicitly set.
+This is the [version number](../concepts/versioning.md) of this version. Versions are compared by 
+[Maven version order rules](../concepts/versioning.md#version-order-specification).
+If this version number is valid semver, the `semver` property is implicitly equal to `version` if `semver` was not explicitly set.
 
 ## Optional properties
 
@@ -40,7 +41,8 @@ This is the version number of this version in semver format. It must follow the 
 
 ### namespace
 
-The namespace of the addon in a reverse-DNS format. Used to identify addons across repositories, if it is present.
+This is the [namespace](../concepts/namespaces.md) of the addon, which should be in a reversed domain name format. 
+Used to identify addons across repositories.
 
 ### files
 
