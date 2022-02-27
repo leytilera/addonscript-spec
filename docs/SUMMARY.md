@@ -1,6 +1,6 @@
 # Summary
 
-- [AddonScript](README.md)
+- [AddonScript](index.md)
 
 # API
 
