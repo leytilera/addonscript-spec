@@ -2,7 +2,8 @@
 
 ```json
 {
-  "id": "namespace:othermod",
+  "id": "othermod",
+  "namespace": "com.example",
   "version": "[1.0]",
   "repositories": ["repo1"],
   "flags": [],
@@ -14,9 +15,14 @@
 
 ### id
 
-This is the ID or namespaced ID of the addon this relation refers to.
+This is the ID of the addon this relation refers to.
 
 ## Optional properties
+
+### namespace
+
+This is the [namespace](../concepts/namespaces.md) of the related addon. This property will be implicitly equal to the 
+[namespace of the addon](addon.md#namespace), if it was not set explicitly.
 
 ### version
 
