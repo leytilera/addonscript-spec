@@ -36,6 +36,18 @@ In contrast to libraries, `inject` will not add that file to the classpath, but
 will also overwrite classes, which are already contained in the game jar, if they
 are also in injected file. 
 
+### execute		
+
+args:		
+
+- `[location]`		
+- `[jar arguments]`		
+
+`execute` can be used with an executable jar file. The jar file will be executed with the given arguments and		
+the given location as working directory. A client should inform the user before just executing the file and		
+ask them for permission to do so and/or it should execute the jar in a closed environment like a container		
+to prevent malicous code from running.
+
 ### launch
 
 `launch` can be used to mark the selected file as the launch file for a specific side. Files having this
