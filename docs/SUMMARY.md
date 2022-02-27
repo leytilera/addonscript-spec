@@ -4,7 +4,7 @@
 
 # API
 
-- [API](api/README.md)
+- [AddonScript API](api/README.md)
 
 # Schema
 
