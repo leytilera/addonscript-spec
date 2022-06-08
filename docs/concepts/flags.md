@@ -3,7 +3,8 @@
 ## Side flags
 
 These are flags, which specify, for which side a [version](../schema/addon.md), a [file](../schema/file.md) or
-a [relation](../schema/relation.md) was made.
+a [relation](../schema/relation.md) was made. If a file has no side flags set, it will inherit them from the
+[version object](../schema/addon.md), while a version is required to have side flags set.
 
 - `client` This flag specifies, that the version, relation or file can be installed on the client side
 - `server` This flag specifies, that the version, relation or file can be installed on the server side
