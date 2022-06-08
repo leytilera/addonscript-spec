@@ -14,5 +14,5 @@ a file on a http server.
 
 `./relative/path/to/file.jar`
 
-This is a relative path to a file. It can only be used with [packaging](../packaging/README.md)
+This is a relative path to a file. It can only be used with [packaging](../packaging)
 or in some third-party environments, which are not covered by this specification.
