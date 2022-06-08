@@ -42,7 +42,8 @@ the namespace from all defined repositories.
 
 ### flags
 
-This is an array of [flags](../concepts/flags.md) for this relation. If this property is not present in a relation object, the relation will use the default flags.
+This is an array of [flags](../concepts/flags.md) for this relation.  If this property is not present in a relation object, the relation will 
+inherit the [side flags](../concepts/flags.md#side-flags) from the [version](addon.md) and have the `required` flag set by default.
 
 ### conditions
 

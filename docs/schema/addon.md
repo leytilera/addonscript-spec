@@ -33,6 +33,10 @@ This is the [version number](../concepts/versioning.md) of this version. Version
 [Maven version order rules](../concepts/versioning.md#version-order-specification).
 If this version number is valid semver, the `semver` property is implicitly equal to `version` if `semver` was not explicitly set.
 
+### flags
+
+This is an array of [flags](../concepts/flags.md) for this version.
+
 ## Optional properties
 
 ### semver
@@ -51,10 +55,6 @@ This is an array of [file objects](file.md) including the files belonging to thi
 ### relations
 
 This is an array of [relation objects](relation.md) which represent addons in relation to this one.
-
-### flags
-
-This is an array of [flags](../concepts/flags.md) for this version.
 
 ### repositories
 
