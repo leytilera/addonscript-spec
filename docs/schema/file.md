@@ -7,8 +7,7 @@
   "flags": [],
   "maven": {},
   "install": [],
-  "sha1": "somesha1checksum",
-  "conditions": {}
+  "sha1": "somesha1checksum"
 }
 ```
 
@@ -45,10 +44,6 @@ inherit the [side flags](../concepts/flags.md#side-flags) from the [version](add
 ### sha1
 
 This is the sha1 checksum of the file. Although the checksum is optional, it is strongly recommended.
-
-### conditions
-
-This is a [conditions object](conditions.md). It can only be used, if the [optional flag](../concepts/flags.md) was set.
 
 ### maven
 

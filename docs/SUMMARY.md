@@ -13,7 +13,6 @@
   - [File Object](schema/file.md)
     - [Install Object](schema/install.md)
   - [Relation Object](schema/relation.md)
-  - [Conditions Object](schema/conditions.md)
   - [Repository Object](schema/repository.md)
   - [Meta Object](schema/meta.md)
 

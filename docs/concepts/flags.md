@@ -24,8 +24,7 @@ or [files](../schema/file.md).
 - `required` This flag specifies, that the related addon or file is required for the addon. If the addon gets installed,
   than any relation or file, which has this flag set, also has to be installed.
 - `optional` This flag specifies, that the related addon or file is optional for this addon. If the addon gets installed,
-  the user should be able to choose, whether he wants to install the relation or file with this flag, or not. This flag
-  can be used in combination with the [conditions](../schema/conditions.md) property.
+  the user should be able to choose, whether he wants to install the relation or file with this flag, or not.
 
 ### Relation specific
 
