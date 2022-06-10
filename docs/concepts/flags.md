@@ -31,7 +31,11 @@ or [files](../schema/file.md).
 These are relational flags, which can only be used for [relations](../schema/relation.md).
 
 - `included` This flag specifies, that the related addon is included in this one. This also means, that if some
-  addon requires the related addon, it can also be installed with this addon instead.
+  addon requires the related addon, it can also be installed with this addon instead. Relations with this flag must
+  have an exact version specified, a version range, which includes multiple versions is not allowed. If this flag
+  is used together with `required` or `optional`, the files of the related addon will be installed like if the
+  relation wouldn't have this flag, relations of the related addon will however be ignored since AddonScript assumes,
+  that they are already covered by this addon.
 - `incompatible` This flag specifies, that the related addon is incompatible to this one. This means, that they can't
   be installed together in the same instance.
 - `launch` This flag specifies, that the related addon should take care of the Minecraft launch process. It can only
