@@ -7,7 +7,9 @@
   "flags": [],
   "maven": {},
   "install": [],
-  "sha1": "somesha1checksum"
+  "hashes": {
+    "sha1": "somesha1checksum"
+  }
 }
 ```
 
@@ -41,9 +43,13 @@ The order in the array corresponds to the order in which the installation steps 
 This is an array of [flags](../concepts/flags.md) for this file. If this property is not present in a file object, the file will 
 inherit the [side flags](../concepts/flags.md#side-flags) from the [version](addon.md) and have the `required` flag set by default.
 
-### sha1
+### hashes
 
-This is the sha1 checksum of the file. Although the checksum is optional, it is strongly recommended.
+This is an object with checksums for this file. The object contains key-value-pairs where the key is the hash algorithm and the
+value is the checksum. 
+
+Supported hash algorithms:
+- `sha1`
 
 ### maven
 
