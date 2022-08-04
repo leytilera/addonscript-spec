@@ -6,7 +6,7 @@
 
 The index endpoint can be used to get basic information about an API
 instance, including the API versions and features supported by that
-instance and the default namespace of the instance. 
+instance and the default [namespace](../concepts/namespaces.md) of the instance. 
 
 #### Example response body:
 
@@ -23,12 +23,12 @@ instance and the default namespace of the instance.
 ### `GET {base URL}/v1/addons/:namespace/:addon`
 
 This endpoint can be used to retrieve information about a specific addon,
-including metadata, all available versions and the canonical namespace of
-the addon. 
+including metadata, all available versions and the [canonical namespace](../concepts/namespaces.md#canonical-namespaces) 
+of the addon. 
 
 #### Path variales:
 
-- `namespace`: The namespace which contains the addon
+- `namespace`: A [namespace](../concepts/namespaces.md) which contains the addon
 - `addon`: The ID of the addon
 
 #### Example response body:
@@ -48,7 +48,7 @@ the addon.
 ```
 
 The [meta object](../schema/meta.md) is the same as in the AddonScript files,
-exept, that it only includes `addon` and `additional` metadata and not `version`
+except, that it only includes `addon` and `additional` metadata and not `version`
 specific metadata.
 
 ### `GET {base URL}/v1/addons/:namespace/:addon/:version`
