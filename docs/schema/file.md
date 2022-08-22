@@ -2,10 +2,9 @@
 
 ```json
 {
-  "id": "modfile",
+  "qualifier": "modfile",
   "link": ["https://example.com/mymod.jar", "./mymod.jar"],
   "flags": [],
-  "maven": {},
   "install": [],
   "hashes": {
     "sha1": "somesha1checksum"
@@ -15,11 +14,12 @@
 
 ## Required properties
 
-### id
+### qualifier
 
-This is the ID of the file.
+This is the qualifier of this file.
 It should be written in the `kebab-case` format, meaning lowercase only and using `-` instead of spaces.
-The file ID has to be unique to this addon version.
+The qualifier has to be unique to this addon version. The namespace, addon ID, version and qualifier
+can together be used to uniquely identify a file.
 
 ### link
 
@@ -51,19 +51,3 @@ value is the checksum.
 Supported hash algorithms:
 - `sha1`
 
-### maven
-
-```json
-{
-  "group": "com.example",
-  "artifact": "mymod",
-  "version": "1.0",
-  "qualifier": ""
-}
-```
-
-Each file has a unique Maven specifier, consisting of a group ID, an artifact ID, a version, a file type and an optional qualifier.
-By default, the group ID is equal to the addon namespace, the artifact ID to the addon ID, the version to the addon version and
-the qualifier to file ID. Those values can be overwritten in this object. If the qualifier is set to an empty string, it will be
-removed from the Maven specifier. The file type is always equal to the file type of the `link`. If the group ID, addon ID and version
-all have their default values and the qualifier is an emptry string, the file type may not be `json`.
