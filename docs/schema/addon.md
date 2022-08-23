@@ -33,6 +33,10 @@ This is the [version number](../concepts/versioning.md) of this version. Version
 [Maven version order rules](../concepts/versioning.md#version-order-specification).
 If this version number is valid semver, the `semver` property is implicitly equal to `version` if `semver` was not explicitly set.
 
+### namespace
+
+This is the [canonical namespace](../concepts/namespaces.md#canonical-namespaces) of the addon.
+
 ### flags
 
 This is an array of [flags](../concepts/flags.md) for this version.
@@ -42,11 +46,6 @@ This is an array of [flags](../concepts/flags.md) for this version.
 ### semver
 
 This is the version number of this version in semver format. It must follow the [semver versioning specifications](https://semver.org/spec/v2.0.0.html).
-
-### namespace
-
-This is the [namespace](../concepts/namespaces.md) of the addon, which should be in a reversed domain name format. 
-Used to identify addons across repositories.
 
 ### files
 
