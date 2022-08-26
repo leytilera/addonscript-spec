@@ -47,16 +47,6 @@ Moreover, this install step may only be used with launchable or instance addons 
 side, which has this install step, except all of them are marked as `optional`, in which case they are also
 implicitly marked as incompatible to each other.
 
-### select
-
-args:
-
-- `[filename]`
-
-`select` is used to select the file with the given file name for other installation steps.
-The file name can also be a relative path, if the file is not directly in the Minecraft directory.
-If no file name is given, the selection resets to the original file itself, also if it was already moved to another location.
-
 ## Locations
 
 Locations are specified as a relative path from the Minecraft directory to which the file should be installed.
