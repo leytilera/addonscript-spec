@@ -5,6 +5,7 @@
 # API
 
 - [AddonScript API](api/README.md)
+  - [File repository](api/features/files.md)
 
 # Schema
 

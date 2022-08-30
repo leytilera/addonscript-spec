@@ -71,4 +71,5 @@ be in a namespace-like format (reversed domain name).
 
 These API features are part of the AddonScript specification itself:
 
+- `files`: [File repository](./features/files.md)
 - To be added
