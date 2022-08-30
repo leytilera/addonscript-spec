@@ -2,19 +2,19 @@
 
 ```json
 {
-  "command": "move",
+  "action": "move",
   "args": ["./mods"]
 }
 ```
 
 ## Required properties
 
-### command
+### action
 
-This is the [install command](../concepts/install.md), which should be used at this installation step.
+This is the [install action](../concepts/install.md), which should be used at this installation step.
 
 ## Optional properties
 
 ### args
 
-This is an array of arguments for the [install command](../concepts/install.md). Each of them takes other arguments.
+This is an array of arguments for the [install action](../concepts/install.md). Each of them takes other arguments.
