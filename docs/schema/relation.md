@@ -21,7 +21,7 @@ This is the ID of the addon this relation refers to.
 ### namespace
 
 This is the [namespace](../concepts/namespaces.md) of the related addon. This property will be implicitly equal to the 
-[namespace of the addon](addon.md#namespace), if it was not set explicitly.
+[namespace of the addon](manifest.md#namespace), if it was not set explicitly.
 
 ### version
 
@@ -42,4 +42,4 @@ the namespace from all defined repositories.
 ### flags
 
 This is an array of [flags](../concepts/flags.md) for this relation.  If this property is not present in a relation object, the relation will 
-inherit the [side flags](../concepts/flags.md#side-flags) from the [version](addon.md) and have the `required` flag set by default.
+inherit the [side flags](../concepts/flags.md#side-flags) from the [version](manifest.md) and have the `required` flag set by default.

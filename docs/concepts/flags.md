@@ -2,16 +2,16 @@
 
 ## Side flags
 
-These are flags, which specify, for which side a [version](../schema/addon.md), a [file](../schema/file.md) or
+These are flags, which specify, for which side a [version](../schema/manifest.md), a [file](../schema/file.md) or
 a [relation](../schema/relation.md) was made. If a file has no side flags set, it will inherit them from the
-[version object](../schema/addon.md), while a version is required to have side flags set.
+[version object](../schema/manifest.md), while a version is required to have side flags set.
 
 - `client` This flag specifies, that the version, relation or file can be installed on the client side
 - `server` This flag specifies, that the version, relation or file can be installed on the server side
 
 ## Version flags
 
-These are flags, which can be set for [versions](../schema/addon.md).
+These are flags, which can be set for [versions](../schema/manifest.md).
 
 - `instance` This flag specifies, that this is a version of an instance addon. Instance addons represent instances of
   Minecraft itself, while non-instance addons have to be installed into an existing instance of Minecraft.
