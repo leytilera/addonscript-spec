@@ -10,7 +10,7 @@
 
 # Schema
 
-- [Addon Object](schema/addon.md)
+- [Addon Manifest Object](schema/manifest.md)
   - [AddonScript Object](schema/addonscript.md)
   - [File Object](schema/file.md)
     - [Install Object](schema/install.md)

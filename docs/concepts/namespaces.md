@@ -12,7 +12,7 @@ optionally also the addon type (i.e. `com.example.repository.mods`, `com.author.
 ## Canonical Namespaces
 
 While an addon can have multiple namespaces, it must have exactly one canonical
-namespace, which is defined in the [addon object](../schema/addon.md#namespace).
+namespace, which is defined in the [addon manifest](../schema/manifest.md#namespace).
 An [API instance](../api/) must also return the canonical namespace of 
 the addon on the [addon endpoint](../api/features/addons.md#get-addon)
 even if the addon was requested from another namespace. To check, if two addons

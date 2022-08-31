@@ -36,5 +36,5 @@ This endpoint can be used to retrieve the manifest of a specific version of an a
 #### Responses:
 
 - `200 OK`: This version of the addon is available in this addon repository.
-The response body must be an [Addon Manifest](../../schema/addon.md).
+The response body must be an [Addon Manifest](../../schema/manifest.md).
 - `404 Not Found`: This version of the addon is not available in this addon repository.

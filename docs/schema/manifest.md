@@ -1,4 +1,4 @@
-# Addon Object
+# Addon Manifest Object
 
 ```json
 {

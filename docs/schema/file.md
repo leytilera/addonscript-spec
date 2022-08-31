@@ -41,7 +41,7 @@ The order in the array corresponds to the order in which the installation steps 
 ### flags
 
 This is an array of [flags](../concepts/flags.md) for this file. If this property is not present in a file object, the file will 
-inherit the [side flags](../concepts/flags.md#side-flags) from the [version](addon.md) and have the `required` flag set by default.
+inherit the [side flags](../concepts/flags.md#side-flags) from the [version](manifest.md) and have the `required` flag set by default.
 
 ### hashes
 
