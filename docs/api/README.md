@@ -6,62 +6,26 @@
 
 The index endpoint can be used to get basic information about an API
 instance, including the API versions and features supported by that
-instance and the default [namespace](../concepts/namespaces.md) of the instance. 
+instance and the [default namespace](../concepts/namespaces.md#default-namespaces) of the instance. 
+The response object of this endpoint contains a `versions` property, which is an object with API
+version numbers as keys and the configuration objects for the specific API version as values.
+For API version `v2` (AddonScript major release 2) the configuration object contains a `default_namespace`
+property, which is the [default namespace](../concepts/namespaces.md#default-namespaces) of the API
+instance, and a `features` property, which is an array containing all [API features](#features)
+available on this API instance.
 
 #### Example response body:
 
 ``` json
 {
-    "default_namespace": "com.example",
-    "versions": ["v1"],
-    "features": ["listing", "filters", "com.example.customfeature"]
+    "versions": {
+        "v2": {
+            "default_namespace": "com.example",
+            "features": ["listing", "filters", "com.example.customfeature"]
+        }
+    }
 }
 ```
-
-## Basic Endpoints
-
-### `GET {base URL}/v1/addons/:namespace/:addon`
-
-This endpoint can be used to retrieve information about a specific addon,
-including metadata, all available versions and the [canonical namespace](../concepts/namespaces.md#canonical-namespaces) 
-of the addon. 
-
-#### Path variales:
-
-- `namespace`: A [namespace](../concepts/namespaces.md) which contains the addon
-- `addon`: The ID of the addon
-
-#### Example response body:
-
-``` json
-{
-    "id": "addon-id",
-    "namespace": "com.example.canonical",
-    "meta": {
-        "addon": {},
-        "additional": {}
-    },
-    "versions": [
-        "1.0"
-    ]
-}
-```
-
-The [meta object](../schema/meta.md) is the same as in the AddonScript files,
-except, that it only includes `addon` and `additional` metadata and not `version`
-specific metadata.
-
-### `GET {base URL}/v1/addons/:namespace/:addon/:version`
-
-This endpoint can be used to retrieve a specific version of an addon.
-The response body of this endpoint contains the [addon schema](../schema/addon.md),
-which is also used in AddonScript JSON files.
-
-#### Path variables:
-
-- `namespace`: The namespace which contains the addon
-- `addon`: The ID of the addon
-- `version`: The [version number](../concepts/versioning.md) of the requested version
 
 ## Features
 
@@ -71,5 +35,5 @@ be in a namespace-like format (reversed domain name).
 
 These API features are part of the AddonScript specification itself:
 
+- `addons`: [Addon repository](./features/addons.md)
 - `files`: [File repository](./features/files.md)
-- To be added
