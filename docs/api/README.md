@@ -2,7 +2,7 @@
 
 ## The Index Endpoint
 
-### `GET {base URL}`
+`GET {base URL}`
 
 The index endpoint can be used to get basic information about an API
 instance, including the API versions and features supported by that
@@ -14,7 +14,7 @@ property, which is the [default namespace](../concepts/namespaces.md#default-nam
 instance, and a `features` property, which is an array containing all [API features](#features)
 available on this API instance.
 
-#### Example response body:
+### Example response body:
 
 ``` json
 {
