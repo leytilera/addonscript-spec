@@ -13,14 +13,14 @@ optionally also the addon type (i.e. `com.example.repository.mods`, `com.author.
 
 While an addon can have multiple namespaces, it must have exactly one canonical
 namespace, which is defined in the [addon object](../schema/addon.md#namespace).
-An [API instance](../api/README.md) must also return the canonical namespace of 
-the addon on the [addon endpoint](../api/README.md#get-base-urlv1addonsnamespaceaddon)
+An [API instance](../api/) must also return the canonical namespace of 
+the addon on the [addon endpoint](../api/features/addons.md#get-addon)
 even if the addon was requested from another namespace. To check, if two addons
 are the same addon, thier canonical namespace and their ID must be equal.
 
 ## Default Namespaces
 
-Each [API instance](../api/README.md) has a default namespace. Addons in the 
+Each [API instance](../api/) has a default namespace. Addons in the 
 repository of that API instance should have that namespace, as long as there
 are no ID conflicts in the repository. The default namespace does not need
 to be the canonical namespace of these addons. 

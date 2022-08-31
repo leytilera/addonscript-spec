@@ -27,9 +27,9 @@ This is an array of [links](../concepts/links.md), which are pointing to the act
 have the same file type. Since AddonScript treats directories and zip files equally, 
 they can be mixed in the same link array. When downloading the file,
 the first link in this array should be used with the other links as fallback, if the first doesn't work.
-If none of the specified links works, the file should be downloaded by it's Maven
-specifier from one of the specified repository, but only, if a `sha1` hash is specified, so that it can be
-verified, that the downloaded file is correct.
+If none of the specified links works or the array is empty, the file link should be retrieved by it's identifier
+from one of the [repositories](repository.md), but only, if a `sha1` hash is specified, so that it can be
+verified, that the downloaded file is correct. 
 
 ## Optional properties
 
