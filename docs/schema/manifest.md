@@ -9,7 +9,7 @@
   "semver": "1.0.0",
   "files": [],
   "relations": [],
-  "flags": ["server", "client"],
+  "flags": {},
   "repositories": [],
   "meta": {}
 }
@@ -39,7 +39,7 @@ This is the [canonical namespace](../concepts/namespaces.md#canonical-namespaces
 
 ### flags
 
-This is an array of [flags](../concepts/flags.md) for this version.
+This is an [flags object](flags.md) which contains [manifest flags](../concepts/flags.md#manifest-flags) for both sides for this manifest.
 
 ## Optional properties
 

@@ -36,17 +36,6 @@ In contrast to libraries, `inject` will not add that file to the classpath, but
 will also overwrite classes, which are already contained in the game jar, if they
 are also in injected file. 
 
-### launch
-
-`launch` can be used to mark the file as the launch file for a specific side. Files having this
-install action can only have the `client` or the `server` flag, not both. If the file is client-sided, it
-has to be a [client JSON file](https://minecraft.fandom.com/wiki/Client.json) as specified by Minecraft
-itself. If it is server-sided, it has to be a jar file, which is the file, that should be launched to start
-the server. The jar file has to be moved to the root of the instance directory, before using `launch` on it.
-Moreover, this install action may only be used with launchable or instance addons and there may be only one file for each
-side, which has this install action, except all of them are marked as `optional`, in which case they are also
-implicitly marked as incompatible to each other.
-
 ## Locations
 
 Locations are specified as a relative path from the Minecraft directory to which the file should be installed.

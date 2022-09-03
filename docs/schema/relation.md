@@ -6,7 +6,7 @@
   "namespace": "com.example",
   "version": "[1.0]",
   "repositories": ["repo1"],
-  "flags": []
+  "flags": {}
 }
 ```
 
@@ -41,5 +41,6 @@ the namespace from all defined repositories.
 
 ### flags
 
-This is an array of [flags](../concepts/flags.md) for this relation.  If this property is not present in a relation object, the relation will 
-inherit the [side flags](../concepts/flags.md#side-flags) from the [version](manifest.md) and have the `required` flag set by default.
+This is an [flags object](flags.md) which contains [relational flags](../concepts/flags.md#relational-flags) for both sides for this relation.
+If a relation has no flag for a side, the relation will be ignored for that side. This behavior is different from the `incompatible` flag,
+since the related addon can still be installed on that side without any conflict.
