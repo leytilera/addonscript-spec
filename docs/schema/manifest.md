@@ -25,7 +25,7 @@ This is an [AddonScript object](addonscript.md) containing information about the
 
 This is the ID of the addon.
 
-It should be written in the `kebab-case` format, meaning lowercase only and using `-` instead of spaces.
+It MUST only contains lowercase alphanumeric characters and hyphens and SHOULD be written in the `kebab-case` format.
 
 ### version
 
@@ -45,7 +45,7 @@ This is an [flags object](flags.md) which contains [manifest flags](../concepts/
 
 ### semver
 
-This is the version number of this version in semver format. It must follow the [semver versioning specifications](https://semver.org/spec/v2.0.0.html).
+This is the version number of this version in semver format. It MUST follow the [semver versioning specifications](https://semver.org/spec/v2.0.0.html).
 
 ### files
 

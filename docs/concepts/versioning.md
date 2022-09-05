@@ -1,7 +1,7 @@
 # AddonScript Versioning
 
 Version numbers in AddonScript are based on Maven version numbers. The only difference to the Maven versioning specification is,
-that AddonScript version numbers may only contain non-space ASCII characters.
+that AddonScript version numbers MUST only contain non-space ASCII characters.
 
 ## Maven Versioning Specification
 

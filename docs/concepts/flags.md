@@ -23,10 +23,10 @@ addon manifest, including for which side it is available and for which side it i
 - `required` This flag specifies, that the related addon or file is required for the addon. If the addon gets installed,
   than any relation or file, which has this flag set, also has to be installed.
 - `optional` This flag specifies, that the related addon or file is optional for this addon. If the addon gets installed,
-  the user should be able to choose, whether he wants to install the relation or file with this flag, or not.
+  the user SHOULD be able to choose, whether he wants to install the relation or file with this flag, or not.
 - `included` This flag is only valid for relations. It specifies, that the related addon is included in this one. 
   This also means, that if some addon requires the related addon, it can also be installed with this addon instead. 
-  Relations with this flag must have an exact version specified, a version range, which includes multiple versions 
+  Relations with this flag MUST have an exact version specified, a version range, which includes multiple versions 
   is not allowed. If this flag is used together with `required` or `optional`, the files of the related addon will 
   be installed like if the relation wouldn't have this flag, relations of the related addon will however be ignored 
   since AddonScript assumes, that they are already covered by this addon.
@@ -34,9 +34,9 @@ addon manifest, including for which side it is available and for which side it i
   that they can't be installed together in the same instance. For a file this flag specifies, that the file can't be 
   installed on the side which has this flag set.
 - `launch` This flag is only valid for instance addons. For a relation this flag specifies, that the launch configuration
-  should be delegated to the related addon. The related addon must also be an instance addon on that side. For a file this 
-  flag specifies, that the file should be the launch file of this addon. On the client side the launch file must be a 
+  will be delegated to the related addon. The related addon MUST also be an instance addon on that side. For a file this 
+  flag specifies, that the file will be the launch file of this addon. On the client side the launch file MUST be a 
   [client JSON file](https://minecraft.fandom.com/wiki/Client.json) which contains the client launch configuration.
-  On the server side the launch file must be an executable jar file, which should be executed to start the server.
+  On the server side the launch file MUST be an executable jar file, which will be executed to start the server.
   This jar file will implicitly be installed by being moved to the root of the server directory. This flag always
   also implies any effect of `required`.

@@ -16,8 +16,8 @@
 
 ### link
 
-This is an array of [links](../concepts/links.md), which are pointing to the actual file. This must be a http(s) link.
-All of these links must have the same file type.
+This is an array of [links](../concepts/links.md), which are pointing to the actual file. These MUST be a http(s) links.
+All of these links MUST have the same file type.
 
 ## Optional properties
 
@@ -31,4 +31,4 @@ Supported hash algorithms:
 
 ### meta
 
-This is a [meta object](meta.md) containing metadata about the file. it may only contain [additional metadata](meta.md#additional).
+This is a [meta object](meta.md) containing metadata about the file. it SHOULD only contain [additional metadata](meta.md#additional).

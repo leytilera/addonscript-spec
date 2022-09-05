@@ -17,7 +17,7 @@
 ### qualifier
 
 This is the qualifier of this file.
-It should be written in the `kebab-case` format, meaning lowercase only and using `-` instead of spaces.
+It MUST only contains lowercase alphanumeric characters and hyphens and SHOULD be written in the `kebab-case` format.
 The qualifier has to be unique to this addon version. The namespace, addon ID, version and qualifier
 can together be used to uniquely identify a file.
 
@@ -26,8 +26,8 @@ can together be used to uniquely identify a file.
 This is an array of [links](../concepts/links.md), which are pointing to the actual file. All of these links must
 have the same file type. Since AddonScript treats directories and zip files equally, 
 they can be mixed in the same link array. When downloading the file,
-the first link in this array should be used with the other links as fallback, if the first doesn't work.
-If none of the specified links works or the array is empty, the file link should be retrieved by it's identifier
+the first link in this array SHOULD be used with the other links as fallback, if the first doesn't work.
+If none of the specified links works or the array is empty, the file link SHOULD be retrieved by it's identifier
 from one of the [repositories](repository.md), but only, if a `sha1` hash is specified, so that it can be
 verified, that the downloaded file is correct. 
 
@@ -35,8 +35,8 @@ verified, that the downloaded file is correct.
 
 ### install
 
-This is an array of [install objects](install.md). They describe how the file should be installed to the game.
-The order in the array corresponds to the order in which the installation steps should be applied.
+This is an array of [install objects](install.md). They describe how the file will be installed to the game.
+The order in the array corresponds to the order in which the installation steps will be applied.
 
 ### flags
 

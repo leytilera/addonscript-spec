@@ -1,6 +1,6 @@
 # Links
 
-AddonScript uses links to point to specific files. AddonScript specifies three link types, which can be used
+AddonScript uses links to point to specific files. AddonScript specifies two link types, which can be used
 to point to files.
 
 ## http(s)

@@ -41,17 +41,17 @@ This object can contain any arbitrary data,
 
 ### name
 
-The full, human-readable name of the addon. This is what a program such as a launcher should
+The full, human-readable name of the addon. This is what a program such as a launcher SHOULD
 display to the user.
 
 ### icon
 
-A [link](../concepts/links.md) to the icon of the addon. This path should point to an image file of small resolution
-which is ideally square. It can be dispayed to users in programs.
+A [link](../concepts/links.md) to the icon of the addon. This path SHOULD point to an image file of small resolution
+which is ideally square. It MAY be dispayed to users in programs.
 
 ### description
 
-A [link](../concepts/links.md) to a description file for the addon. The file should be in CommonMark markdown.
+A [link](../concepts/links.md) to a description file for the addon. The file SHOULD be in CommonMark markdown.
 
 ### summary
 
@@ -75,7 +75,8 @@ The type of the addon, for example `mod`, `modpack` or `resourcepack`.
 
 ### contributors
 
-An array of people who have contributed to the addon. 
+An array of people who have contributed to the addon. Each contributor is represented by an object, which
+MUST have a `name` and a `email` property.
 
 # Version Meta Object
 
