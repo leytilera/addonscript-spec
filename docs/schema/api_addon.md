@@ -20,7 +20,7 @@
 
 This is the ID of the addon.
 
-It should be written in the `kebab-case` format, meaning lowercase only and using `-` instead of spaces.
+It MUST only contains lowercase alphanumeric characters and hyphens and SHOULD be written in the `kebab-case` format.
 
 ### namespace
 

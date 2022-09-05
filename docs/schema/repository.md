@@ -11,7 +11,7 @@
 
 ### id
 
-This is the ID of the repository. It has to be unique to the AddonScript file.
+This is the ID of the repository. It MUST be unique in the [manifest](manifest.md).
 
 ### url
 

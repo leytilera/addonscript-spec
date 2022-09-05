@@ -11,7 +11,7 @@
 
 ### action
 
-This is the [install action](../concepts/install.md), which should be used at this installation step.
+This is the [install action](../concepts/install.md), which will be used at this installation step.
 
 ## Optional properties
 

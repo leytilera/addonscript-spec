@@ -30,7 +30,7 @@ available on this API instance.
 ## Features
 
 API features can be either part of the specification itself or 
-are specified by third parties. Third-party API features should
+are specified by third parties. Third-party API features SHOULD
 be in a namespace-like format (reversed domain name).
 
 These API features are part of the AddonScript specification itself:
