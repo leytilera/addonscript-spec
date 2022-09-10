@@ -17,6 +17,9 @@ addon manifest, including for which side it is available and for which side it i
 - `incompatible` This flag specifies, that the manifest is not compatible with the side which has this flag set.
   If a side has this flag, this side will completly be ignored for the manifest.
 - `instance` This flag specifies, that this is a manifest of an [instance addon](instance.md).
+- `env` This flag is only valid for [instance addons](instance.md). It specifies, that the 
+  [environment builder API](../api/features/env.md) will be used to bet the launch files for this addon.
+  An addon with this flag MUST have the [env_api](../schema/manifest.md#envapi) property. 
 
 ## Relational flags
 
@@ -33,10 +36,22 @@ addon manifest, including for which side it is available and for which side it i
 - `incompatible` This flag specifies for a relation, that the related addon is incompatible to this one, which means, 
   that they can't be installed together in the same instance. For a file this flag specifies, that the file can't be 
   installed on the side which has this flag set.
-- `launch` This flag is only valid for instance addons. For a relation this flag specifies, that the launch configuration
-  will be delegated to the related addon. The related addon MUST also be an instance addon on that side. For a file this 
-  flag specifies, that the file will be the launch file of this addon. On the client side the launch file MUST be a 
-  [client JSON file](https://minecraft.fandom.com/wiki/Client.json) which contains the client launch configuration.
-  On the server side the launch file MUST be an executable jar file, which will be executed to start the server.
-  This jar file will implicitly be installed by being moved to the root of the server directory. This flag always
-  also implies any effect of `required`.
+- `launch` This flag is only valid for [instance addons](instance.md). For a relation this flag specifies, that the launch 
+  configuration will be delegated to the related addon. The related addon MUST also be an instance addon on that side. 
+  For a file this flag specifies, that the file will be the launch file of this addon. On the client side the launch 
+  file MUST be a [client JSON file](https://minecraft.fandom.com/wiki/Client.json) which contains the client launch 
+  configuration. On the server side the launch file MUST be an executable jar file, which will be executed to start 
+  the server. This jar file will implicitly be installed by being moved to the root of the server directory. 
+  This flag always also implies any effect of `required`.
+- `env` This flag is only valid for relations of [instance addons](instance.md). It MUST only be used for instance
+  addons, that either have the `env` [manifest flag](#manifest-flags) or are delegating the launch configuration
+  to such an addon. This flag speficies, that the related addon will be [requested](../schema/api_env_request.md#requested)
+  to be part of the [launch environment](../api/features/env.md#build-launch-environment). For the addon, for
+  which the launch environment will be build, it is used together with the `required` or `optional` flag
+  to specify, which addons are required for the launch environment, which are optional and which versions
+  of them are valid. An addon, that is delegating the launch configuration to one, which has the `env` 
+  [manifest flag](#manifest-flags), uses this flag to tell AddonScript, which version of the addons will be requested
+  for the environment by setting an exact [version](../schema/relation.md#version) for the relation. It also tells
+  AddonScript, which optional `env` addons will be part of the environment. If an addon with the `env`
+  [manifest flag](#manifest-flags) gets manually installed, meaning not as a dependency, the user SHOULD be asked,
+  which optional `env` addons and which version of each `env` addon will be requested.
