@@ -37,3 +37,4 @@ These API features are part of the AddonScript specification itself:
 
 - `addons`: [Addon repository](./features/addons.md)
 - `files`: [File repository](./features/files.md)
+- `env`: [Environment builder](./features/env.md)
