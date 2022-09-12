@@ -50,7 +50,7 @@ End Result Examples:
 
 Note: Contrary to what was stated in some design documents, for version order, snapshots are not treated differently than releases or any other qualifier.
 
-### Dependancy Version Requirement Specification
+### Dependency Version Requirement Specification
 
 Version requirements have the following syntax:
 

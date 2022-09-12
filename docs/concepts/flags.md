@@ -18,7 +18,7 @@ addon manifest, including for which side it is available and for which side it i
   If a side has this flag, this side will completly be ignored for the manifest.
 - `instance` This flag specifies, that this is a manifest of an [instance addon](instance.md).
 - `env` This flag is only valid for [instance addons](instance.md). It specifies, that the 
-  [environment builder API](../api/features/env.md) will be used to bet the launch files for this addon.
+  [environment builder API](../api/features/env.md) will be used to get the launch files for this addon.
   An addon with this flag MUST have the [env_api](../schema/manifest.md#envapi) property. 
 
 ## Relational flags
