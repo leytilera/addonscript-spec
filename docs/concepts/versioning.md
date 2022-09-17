@@ -1,7 +1,13 @@
 # AddonScript Versioning
 
-Version numbers in AddonScript are based on Maven version numbers. The only difference to the Maven versioning specification is,
-that AddonScript version numbers MUST only contain non-space ASCII characters.
+## AddonScript Version Numbers
+
+AddonScript version numbers MUST only contain non-whitespace ASCII characters. They SHOULD follow the
+[SemVer specifications](https://semver.org/spec/v2.0.0.html). AddonScript version numbers are ordered
+according to the [Maven version order specification](#version-order-specification). If an AddonScript 
+version number is valid SemVer, that version of the addon is SemVer compatible and implies all semantics 
+according to SemVer. AddonScript implementations MAY provide specific behavior based on the semver semantics, 
+for example warning the user before updating to a next major version.
 
 ## Maven Versioning Specification
 

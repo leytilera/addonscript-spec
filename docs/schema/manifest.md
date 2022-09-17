@@ -29,12 +29,7 @@ It MUST only contains lowercase alphanumeric characters and hyphens and SHOULD b
 
 ### version
 
-This is the [version number](../concepts/versioning.md) of this version. Versions are compared by 
-[Maven version order rules](../concepts/versioning.md#version-order-specification).
-If this version number is valid semver, this version of the addon is semver compatible and implies
-all semantics according to the [semver specifications](https://semver.org/spec/v2.0.0.html).
-AddonScript implementations MAY provide specific behavior based on the semver semantics, for example
-warning the user before updating to a next major version.
+This is the [AddonScript version number](../concepts/versioning.md#addonscript-version-numbers) of this version.
 
 ### namespace
 
