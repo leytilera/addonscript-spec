@@ -5,8 +5,7 @@
   "addonscript": {},
   "id": "myaddon",
   "namespace": "com.example",
-  "version": "1.0",
-  "semver": "1.0.0",
+  "version": "1.0.0",
   "files": [],
   "relations": [],
   "flags": {},
@@ -30,9 +29,7 @@ It MUST only contains lowercase alphanumeric characters and hyphens and SHOULD b
 
 ### version
 
-This is the [version number](../concepts/versioning.md) of this version. Versions are compared by 
-[Maven version order rules](../concepts/versioning.md#version-order-specification).
-If this version number is valid semver, the `semver` property is implicitly equal to `version` if `semver` was not explicitly set.
+This is the [AddonScript version number](../concepts/versioning.md#addonscript-version-numbers) of this version.
 
 ### namespace
 
@@ -43,10 +40,6 @@ This is the [canonical namespace](../concepts/namespaces.md#canonical-namespaces
 This is an [flags object](flags.md) which contains [manifest flags](../concepts/flags.md#manifest-flags) for both sides for this manifest.
 
 ## Optional properties
-
-### semver
-
-This is the version number of this version in semver format. It MUST follow the [semver versioning specifications](https://semver.org/spec/v2.0.0.html).
 
 ### files
 

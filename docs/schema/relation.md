@@ -16,22 +16,17 @@
 
 This is the ID of the addon this relation refers to.
 
+### version
+
+This is an [AddonScript version range](../concepts/versioning.md#addonscript-version-ranges) that specifies, which versions
+of the related addon are targeted by this relation.
+
 ## Optional properties
 
 ### namespace
 
 This is the [namespace](../concepts/namespaces.md) of the related addon. This property will be implicitly equal to the 
 [namespace of the addon](manifest.md#namespace), if it was not set explicitly.
-
-### version
-
-This is a [maven version range](../concepts/versioning.md#dependancy-version-requirement-specification) that specifies, which versions
-of the related addon are targeted by this relation. You can either set this property or `semver`, but exactly one of them MUST be set.
-
-### semver
-
-This is a [semver version range](https://github.com/semver/semver/pull/584) of supported versions of this relation.
-It will only allow versions of the related addon, which have a valid semver version number, which is in this range.
 
 ### repositories
 
