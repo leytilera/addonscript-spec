@@ -4,10 +4,25 @@
 
 AddonScript version numbers MUST only contain non-whitespace ASCII characters. They SHOULD follow the
 [SemVer specifications](https://semver.org/spec/v2.0.0.html). AddonScript version numbers are ordered
-according to the [Maven version order specification](#version-order-specification). If an AddonScript 
-version number is valid SemVer, that version of the addon is SemVer compatible and implies all semantics 
-according to SemVer. AddonScript implementations MAY provide specific behavior based on the semver semantics, 
-for example warning the user before updating to a next major version.
+according to the [Maven version order specification](#version-order-specification). 
+
+### SemVer Compatible Versions
+
+If an AddonScript version number is valid SemVer, that version of the addon is SemVer compatible and implies 
+all semantics according to SemVer. AddonScript implementations MAY provide specific behavior based on the 
+semver semantics, for example warning the user before updating to a next major version.
+
+## AddonScript Version Ranges
+
+An AddonScript version range can either be a [SemVer version range](https://github.com/semver/semver/pull/584)
+or a [Maven version range](#dependency-version-requirement-specification). If a version range starts with one
+of SemVer primitive operators (`<`, `<=`, `>`, `>=`, `=`) it will be considered as a SemVer version range, 
+otherwise it will be a Maven version range. SemVer version ranges can only include
+[SemVer compatible versions](#semver-compatible-versions). If the version range is required to include
+an exact version, for example when using the `included` [relational flag](./flags.md#relational-flags),
+it MUST be a Maven version range, which is the targeted version surrounded by `[]`. In all other cases
+it is highly RECOMMENDED to use SemVer version ranges, as long as the targeted addon uses 
+[SemVer compatible versions](#semver-compatible-versions).
 
 ## Maven Versioning Specification
 
