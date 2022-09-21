@@ -8,7 +8,8 @@
   "install": [],
   "hashes": {
     "sha1": "somesha1checksum"
-  }
+  },
+  "meta": {}
 }
 ```
 
@@ -51,3 +52,6 @@ value is the checksum.
 Supported hash algorithms:
 - `sha1`
 
+### meta
+
+This is a [meta object](meta.md) containing metadata about the file. it SHOULD only contain [additional metadata](meta.md#additional).
