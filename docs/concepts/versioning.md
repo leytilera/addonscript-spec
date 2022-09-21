@@ -20,7 +20,7 @@ of SemVer primitive operators (`<`, `<=`, `>`, `>=`, `=`) it will be considered 
 otherwise it will be a Maven version range. SemVer version ranges can only include
 [SemVer compatible versions](#semver-compatible-versions). If the version range is required to include
 an exact version, for example when using the `included` [relational flag](./flags.md#relational-flags),
-it MUST be a Maven version range, which is the targeted version surrounded by `[]`. In all other cases
+it MUST be a Maven soft requirement, which is equal to the targeted version. In all other cases
 it is highly RECOMMENDED to use SemVer version ranges, as long as the targeted addon uses 
 [SemVer compatible versions](#semver-compatible-versions).
 
