@@ -52,7 +52,8 @@ This is an array of [relation objects](relation.md) which represent addons in re
 ### repositories
 
 This is an array of [repository objects](repository.md). Each repository object defines one repository from which files or
-addons can be retrieved.
+addons can be retrieved. Each AddonScript manifest SHOULD have a repository for the [canonical namespace](#namespace) of 
+that manifest, from which AddonScript implementations MAY check for updates for this addon.
 
 ### env_api
 

@@ -9,10 +9,8 @@ instance, including the API versions and features supported by that
 instance and the [default namespace](../concepts/namespaces.md#default-namespaces) of the instance. 
 The response object of this endpoint contains a `versions` property, which is an object with API
 version numbers as keys and the configuration objects for the specific API version as values.
-For API version `v2` (AddonScript major release 2) the configuration object contains a `default_namespace`
-property, which is the [default namespace](../concepts/namespaces.md#default-namespaces) of the API
-instance, and a `features` property, which is an array containing all [API features](#features)
-available on this API instance.
+For API version `v2` (AddonScript major release 2) the configuration object contains a `features` 
+property, which is an array containing all [API features](#features) available on this API instance.
 
 ### Example response body:
 
@@ -20,8 +18,7 @@ available on this API instance.
 {
     "versions": {
         "v2": {
-            "default_namespace": "com.example",
-            "features": ["listing", "filters", "com.example.customfeature"]
+            "features": ["addons", "env", "com.example.customfeature"]
         }
     }
 }
