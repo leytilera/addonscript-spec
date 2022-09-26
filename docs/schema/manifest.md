@@ -10,7 +10,6 @@
   "relations": [],
   "flags": {},
   "repositories": [],
-  "env_api": "https://example.com",
   "meta": {}
 }
 ```
@@ -52,13 +51,10 @@ This is an array of [relation objects](relation.md) which represent addons in re
 ### repositories
 
 This is an array of [repository objects](repository.md). Each repository object defines one repository from which files or
-addons can be retrieved.
-
-### env_api
-
-This is the base URL of an [AddonScript API](../api) instance, which has the `env` feature and will be used to
-build the launch environment for this addon. This property will only be used if this addon has the `env`
-[manifest flag](../concepts/flags.md#manifest-flags).
+addons can be retrieved. Each AddonScript manifest SHOULD have a repository for the [canonical namespace](#namespace) of 
+that manifest, from which AddonScript implementations MAY check for updates for this addon. If this addon has the `env`
+[manifest flag](../concepts/flags.md#manifest-flags), it MUST have such a repository to provide API instances, which can
+be used to request the [launch environment](../api/features/env.md#build-launch-environment).
 
 ### meta
 
