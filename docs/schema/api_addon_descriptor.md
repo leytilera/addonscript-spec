@@ -17,7 +17,7 @@ This is the [ID](manifest.md#id) of the addon which this object describes.
 ### namespace
 
 This is the [namespace](../concepts/namespaces.md) of the addon which this object describes.
-It SHOULD be the [canonical namespace](../concepts/namespaces.md#canonical-namespaces).
+It MUST be the [canonical namespace](../concepts/namespaces.md#canonical-namespaces).
 
 ### version
 
