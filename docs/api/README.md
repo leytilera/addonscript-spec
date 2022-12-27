@@ -35,13 +35,24 @@ which is currently the only existing version.
 The `v2` version index endpoint can be used to retrieve the API features
 supported by this API instance on version `v2`. The response object of 
 this endpint contains a `features` property, which is an array containing
-all [API features](#features) supported on this instance.
+all [API features](#features) supported on this instance. It also contains
+a `manifest_version` property, which is the latest 
+[manifest version](../schema/addonscript.md#version) available on this API
+instance. This version MUST be part of AddonScript major version 2.
+The manifest version of all manifests (and other objects using the manifest 
+version), returned by enpoints of this API version on this instance, MUST be 
+equal or less than this property, but MUST also be part of AddonScript major 
+version 2 (manifest version must be greater or equal to 2). If a client does 
+not support the manifest version returned by this endpoint, it SHOULD try to 
+request addons from other API instances, as this instance MAY return manifests
+which are unsupported by the client.
 
 ### Example response body:
 
 ``` json
 {
-    "features": ["addons", "env", "com.example.customfeature"]
+    "features": ["addons", "env", "com.example.customfeature"],
+    "manifest_version": 2
 }
 ```
 
