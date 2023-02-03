@@ -3,7 +3,8 @@
 ```json
 {
     "addonscript": {},
-    "files": []
+    "files": [],
+    "launch": {}
 }
 ```
 
@@ -18,3 +19,9 @@ It MUST be equal to the [addonscript Property](api_env_request.md#addonscript) o
 
 This is an array of [File objects](file.md). These files will be concidered to be files of the addon, for which the launch
 environment was build, and MUST be treated equal to the [files in the manifest](manifest.md#files).
+
+## Optional properties
+
+### launch
+
+This is a [Launch Config object](./launch.md) which can be used, to modify the launch configuration of the instance.

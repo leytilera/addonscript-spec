@@ -16,7 +16,6 @@ addon manifest, including for which side it is available and for which side it i
   meaning, that this addon is not required on this side to be compatible, even if the other side has this addon installed.
 - `incompatible` This flag specifies, that the manifest is not compatible with the side which has this flag set.
   If a side has this flag, this side will completly be ignored for the manifest.
-- `instance` This flag specifies, that this is a manifest of an [instance addon](instance.md).
 - `env` This flag is only valid for [instance addons](instance.md). It specifies, that the 
   [environment builder API](../api/features/env.md) will be used to get the launch files for this addon.
   An addon with this flag MUST have a [repository](../schema/repository.md) for it's 
@@ -37,13 +36,10 @@ addon manifest, including for which side it is available and for which side it i
 - `incompatible` This flag specifies for a relation, that the related addon is incompatible to this one, which means, 
   that they can't be installed together in the same instance. For a file this flag specifies, that the file can't be 
   installed on the side which has this flag set.
-- `launch` This flag is only valid for [instance addons](instance.md). For a relation this flag specifies, that the launch 
-  configuration will be delegated to the related addon. The related addon MUST also be an instance addon on that side. 
-  For a file this flag specifies, that the file will be the launch file of this addon. On the client side the launch 
-  file MUST be a [client JSON file](https://minecraft.fandom.com/wiki/Client.json) which contains the client launch 
-  configuration. On the server side the launch file MUST be an executable jar file, which will be executed to start 
-  the server. This jar file will implicitly be installed by being moved to the root of the server directory. 
-  This flag always also implies any effect of `required`.
+- `launch` This flag is only valid for relations of [instance addons](instance.md). It specifies, that the 
+  [launch configuration](../schema/launch.md) should be inherited from the related addon (which MUST als be an
+  instance addon or [Minecraft](./minecraft.md) itself). The inherited launch configuration, MAY still be modified
+  using the [launch object](../schema/launch.md) of this addon. This flag always also implies any effect of `required`.
 - `env` This flag is only valid for relations of [instance addons](instance.md). It MUST only be used for instance
   addons, that either have the `env` [manifest flag](#manifest-flags) or are delegating the launch configuration
   to such an addon. This flag speficies, that the related addon will be [requested](../schema/api_env_request.md#requested)

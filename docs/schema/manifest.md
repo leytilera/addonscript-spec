@@ -10,6 +10,8 @@
   "relations": [],
   "flags": {},
   "repositories": [],
+  "instance": false,
+  "launch": {},
   "meta": {}
 }
 ```
@@ -55,6 +57,17 @@ addons can be retrieved. Each AddonScript manifest SHOULD have a repository for 
 that manifest, from which AddonScript implementations MAY check for updates for this addon. If this addon has the `env`
 [manifest flag](../concepts/flags.md#manifest-flags), it MUST have such a repository to provide API instances, which can
 be used to request the [launch environment](../api/features/env.md#build-launch-environment).
+
+### instance
+
+This is a boolean which specifies, if this addon is an [instance addon](../concepts/instance.md). 
+If this property is not present, it defaults to `false`.
+
+### launch
+
+This is a [launch config object](launch.md) which can be used to modify the 
+inherited launch configuration of this instance.
+Only available for [instance addons](../concepts/instance.md).
 
 ### meta
 

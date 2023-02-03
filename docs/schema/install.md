@@ -3,7 +3,8 @@
 ```json
 {
   "action": "move",
-  "args": ["./mods"]
+  "args": ["./mods"],
+  "side": "both"
 }
 ```
 
@@ -18,3 +19,8 @@ This is the [install action](../concepts/install.md), which will be used at this
 ### args
 
 This is an array of arguments for the [install action](../concepts/install.md). Each of them takes other arguments.
+
+### side
+
+This specifies, for which side this install action should be performed. Valid values are `client`, `server` and `both`.
+If this property is not present, it defaults to `both`.
