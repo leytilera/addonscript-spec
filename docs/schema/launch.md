@@ -39,7 +39,8 @@ for the server.
 {
     "main_file": "somefilequalifier",
     "main_class": "com.example.SomeClass",
-    "arguments": ["--someArgument"]
+    "arguments": ["--someArgument"],
+    "jvm_arguments": ["-Djvmargument"]
 }
 ```
 
@@ -64,5 +65,11 @@ specified in of manifest of the [main jar file](#mainfile) should be used.
 ### arguments
 
 This is an array of arguments, which will be used to launch the instance
-in addition to inherited arguments. They will be appendes after inherited 
+in addition to inherited arguments. They will be appended after inherited 
 arguments.
+
+### jvm_arguments
+
+This is an array of JVM arguments, which will be used to launch the instance
+in addition to inherited JVM arguments. They will be appended after inherited 
+JVM arguments.
