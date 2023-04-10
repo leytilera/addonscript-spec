@@ -16,10 +16,6 @@ addon manifest, including for which side it is available and for which side it i
   meaning, that this addon is not required on this side to be compatible, even if the other side has this addon installed.
 - `incompatible` This flag specifies, that the manifest is not compatible with the side which has this flag set.
   If a side has this flag, this side will completly be ignored for the manifest.
-- `env` This flag is only valid for [instance addons](instance.md). It specifies, that the 
-  [environment builder API](../api/features/env.md) will be used to get the launch files for this addon.
-  An addon with this flag MUST have a [repository](../schema/repository.md) for it's 
-  [canonical namespace](../schema/manifest.md#namespace).
 
 ## Relational flags
 
@@ -40,15 +36,16 @@ addon manifest, including for which side it is available and for which side it i
   [launch configuration](../schema/launch.md) should be inherited from the related addon (which MUST als be an
   instance addon or [Minecraft](./minecraft.md) itself). The inherited launch configuration, MAY still be modified
   using the [launch object](../schema/launch.md) of this addon. This flag always also implies any effect of `required`.
-- `env` This flag is only valid for relations of [instance addons](instance.md). It MUST only be used for instance
-  addons, that either have the `env` [manifest flag](#manifest-flags) or are delegating the launch configuration
-  to such an addon. This flag speficies, that the related addon will be [requested](../schema/api_env_request.md#requested)
-  to be part of the [launch environment](../api/features/env.md#build-launch-environment). For the addon, for
-  which the launch environment will be build, it is used together with the `required` or `optional` flag
-  to specify, which addons are required for the launch environment, which are optional and which versions
-  of them are valid. An addon, that is delegating the launch configuration to one, which has the `env` 
-  [manifest flag](#manifest-flags), uses this flag to tell AddonScript, which version of the addons will be requested
-  for the environment by setting an exact [version](../schema/relation.md#version) for the relation. It also tells
-  AddonScript, which optional `env` addons will be part of the environment. If an addon with the `env`
-  [manifest flag](#manifest-flags) gets manually installed, meaning not as a dependency, the user SHOULD be asked,
-  which optional `env` addons and which version of each `env` addon will be requested.
+- `env` This flag is only valid for relations of [instance addons](instance.md). 
+  An addon, that is inheriting the launch configuration from one, which uses the 
+  [environment builder](../api/features/builder.md), uses this flag to tell AddonScript, which version of the `expected` 
+  addons will be requested for the environment by setting an exact [version](../schema/relation.md#version) for the relation. 
+  It also tells AddonScript, which optional `expected` addons will be part of the environment and which not. 
+- `expected` This flag is only valid for relations of [instance addons](instance.md), which use the 
+  [environment builder](../api/features/builder.md). This flag speficies, that this addon expects the related addon 
+  to be [requested](../schema/api_builder_request.md#requested) as a part of the 
+  [launch environment](../api/features/builder.md#build-launch-environment).
+  It is used together with the `required` or `optional` flag to specify, which addons are required for the launch 
+  environment, which are optional and which versions of them are valid. If an addon, which uses the 
+  [environment builder](../api/features/builder.md), gets manually installed, meaning not as a dependency, the user 
+  SHOULD be asked, which optional `expected` addons and which version of each `expected` addon will be requested.

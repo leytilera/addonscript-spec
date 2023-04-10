@@ -14,9 +14,9 @@ modifications to it.
 ## Instance addons as relations
 
 If an instance addon is a relation of another instance addon, each side of that
-relation MUST have at least one of the [flags](flags.md) `included`, `launch`, `env`
-or `incompatible`. Non-instance addons MAY have instance addons as relations without
-this restriction.
+relation MUST have at least one of the [flags](flags.md) `included`, `launch`, `env`,
+`expect` or `incompatible`. Non-instance addons MAY have instance addons as relations 
+without this restriction.
 
 ## Launch configurations
 

@@ -13,7 +13,7 @@
 ### addonscript
 
 This is an [AddonScript object](addonscript.md) containing information about the version of AddonScript used in this response.
-It MUST be equal to the [addonscript Property](api_env_request.md#addonscript) of the [request](api_env_request.md).
+It MUST be equal to the [addonscript Property](api_builder_request.md#addonscript) of the [request](api_builder_request.md).
 
 ### files
 

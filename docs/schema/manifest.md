@@ -11,6 +11,7 @@
   "flags": {},
   "repositories": [],
   "instance": false,
+  "use_builder": false,
   "launch": {},
   "meta": {}
 }
@@ -54,13 +55,19 @@ This is an array of [relation objects](relation.md) which represent addons in re
 
 This is an array of [repository objects](repository.md). Each repository object defines one repository from which files or
 addons can be retrieved. Each AddonScript manifest SHOULD have a repository for the [canonical namespace](#namespace) of 
-that manifest, from which AddonScript implementations MAY check for updates for this addon. If this addon has the `env`
-[manifest flag](../concepts/flags.md#manifest-flags), it MUST have such a repository to provide API instances, which can
-be used to request the [launch environment](../api/features/env.md#build-launch-environment).
+that manifest, from which AddonScript implementations MAY check for updates for this addon. If [use_builder](#usebuilder) is `true`, 
+this addon MUST have such a repository to provide API instances, which can be used to request the 
+[launch environment](../api/features/builder.md#build-launch-environment).
 
 ### instance
 
 This is a boolean which specifies, if this addon is an [instance addon](../concepts/instance.md). 
+If this property is not present, it defaults to `false`.
+
+### use_builder
+
+This is a boolean which specifies, if this addon will use the [environment builder](../api/features/builder.md).
+Only valid if [instance](#instance) is `true`.
 If this property is not present, it defaults to `false`.
 
 ### launch

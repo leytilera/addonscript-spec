@@ -7,7 +7,7 @@
 - [AddonScript API](api/README.md)
   - [Addon repository](api/features/addons.md)
   - [File repository](api/features/files.md)
-  - [Environment builder](api/features/env.md)
+  - [Environment builder](api/features/builder.md)
 
 # Schema
 
@@ -23,9 +23,9 @@
     - [Library Object](schema/library.md)
 - [API Addon Object](schema/api_addon.md)
 - [API File Object](schema/api_file.md)
-- [Environment Builder Request Object](schema/api_env_request.md)
+- [Environment Builder Request Object](schema/api_builder_request.md)
   - [Addon Descriptor Object](schema/api_addon_descriptor.md)
-- [Environment Builder Response Object](schema/api_env_response.md)
+- [Environment Builder Response Object](schema/api_builder_response.md)
 
 # Concepts
 
