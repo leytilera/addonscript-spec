@@ -55,7 +55,7 @@ This is an array of [relation objects](relation.md) which represent addons in re
 
 This is an array of [repository objects](repository.md). Each repository object defines one repository from which files or
 addons can be retrieved. Each AddonScript manifest SHOULD have a repository for the [canonical namespace](#namespace) of 
-that manifest, from which AddonScript implementations MAY check for updates for this addon. If [use_builder](#usebuilder) is `true`, 
+that manifest, from which AddonScript implementations MAY check for updates for this addon. If [use_builder](#use_builder) is `true`, 
 this addon MUST have such a repository to provide API instances, which can be used to request the 
 [launch environment](../api/features/builder.md#build-launch-environment).
 

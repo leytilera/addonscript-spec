@@ -4,12 +4,12 @@
 
 ### Build launch environment
 
-`POST {base URL}/v2/env`
+`POST {base URL}/v2/builder`
 
 This endpoint can be used to build the launch environment for an [instance addon](../../concepts/instance.md).
 
 If an [instance addon](../../concepts/instance.md), which has to provide a launch configuration, has
-[`use_builder`](../../schema/manifest.md#usebuilder) set to `true`, AddonScript will send a request to this
+[`use_builder`](../../schema/manifest.md#use_builder) set to `true`, AddonScript will send a request to this
 endpoint of an API instance, on which the [repository](../../schema/repository.md) of the
 [namespace](../../schema/manifest.md#namespace) of this addon can be found.
 This request contains information about the AddonScript [schema version](../../schema/api_builder_request.md#addonscript),
