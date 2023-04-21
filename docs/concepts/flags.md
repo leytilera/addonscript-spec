@@ -33,9 +33,10 @@ addon manifest, including for which side it is available and for which side it i
   that they can't be installed together in the same instance. For a file this flag specifies, that the file can't be 
   installed on the side which has this flag set.
 - `launch` This flag is only valid for relations of [instance addons](instance.md). It specifies, that the 
-  [launch configuration](../schema/launch.md) should be inherited from the related addon (which MUST als be an
-  instance addon or [Minecraft](./minecraft.md) itself). The inherited launch configuration, MAY still be modified
-  using the [launch object](../schema/launch.md) of this addon. This flag always also implies any effect of `required`.
+  [launch configuration](../schema/launch.md) should be inherited from the related addon (which MUST also be an
+  instance addon). The inherited launch configuration, MAY still be modified
+  using the [launch object](../schema/launch.md) of this addon or by adding libraries with the `library` flag. 
+  This flag always also implies any effect of `required`.
 - `env` This flag is only valid for relations of [instance addons](instance.md). 
   An addon, that is inheriting the launch configuration from one, which uses the 
   [environment builder](../api/features/builder.md), uses this flag to tell AddonScript, which version of the `expected` 
@@ -49,3 +50,6 @@ addon manifest, including for which side it is available and for which side it i
   environment, which are optional and which versions of them are valid. If an addon, which uses the 
   [environment builder](../api/features/builder.md), gets manually installed, meaning not as a dependency, the user 
   SHOULD be asked, which optional `expected` addons and which version of each `expected` addon will be requested.
+- `library` This flag is only valid for files of [instance addons](instance.md). It specifies, that this file
+  will be added as a libary to the [launch configuration](../concepts/instance.md#launch-configurations) of this
+  addon.

@@ -2,9 +2,15 @@
 
 Minecraft itself can be used as a [relation](../schema/relation.md) in AddonScript
 [manifests](../schema/manifest.md). This way addons MAY define, with which versions
-of Minecraft they are compatible. [Instance addons](./instance.md) MUST either
-directly or indirectly inherit their launch configuration from Minecraft. This 
-way it is also defined, on which version of Minecraft an instance is base on.
+of Minecraft they are compatible. [Instance addons](./instance.md) MUST have
+their [launch configuration](./instance.md#launch-configurations) based on
+the launch configuration of a Minecraft version. This way it is also defined, 
+on which version of Minecraft an instance is base on. The version of Minecraft, 
+which will be used, MUST be defined either by using the 
+`included` [relational flag](./flags.md#relational-flags) with an exact Minecraft
+version or by using the `expected` [relational flag](./flags.md#relational-flags),
+while the exact version later gets defined by the user or by the `env` 
+[relational flag](./flags.md#relational-flags).
 There is no AddonScript manifest for Minecraft, AddonScript implementations
 MUST know the [ID and namespace](#id-and-namespace) of Minecraft and how to
 handle it as specified below.

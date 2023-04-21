@@ -12,7 +12,8 @@
   "repositories": [],
   "instance": false,
   "use_builder": false,
-  "launch": {},
+  "launch_client": {},
+  "launch_server": {},
   "meta": {}
 }
 ```
@@ -70,10 +71,16 @@ This is a boolean which specifies, if this addon will use the [environment build
 Only valid if [instance](#instance) is `true`.
 If this property is not present, it defaults to `false`.
 
-### launch
+### launch_client
 
-This is a [launch config object](launch.md) which can be used to modify the 
-inherited launch configuration of this instance.
+This is a [launch config object](launch.md) for the client, 
+which can be used to modify the launch configuration of this instance.
+Only available for [instance addons](../concepts/instance.md).
+
+### launch_server
+
+This is a [launch config object](launch.md) for the server, 
+which can be used to modify the launch configuration of this instance.
 Only available for [instance addons](../concepts/instance.md).
 
 ### meta

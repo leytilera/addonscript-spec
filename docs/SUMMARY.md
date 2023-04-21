@@ -20,7 +20,6 @@
   - [Repository Object](schema/repository.md)
   - [Meta Object](schema/meta.md)
   - [Launch Config Object](schema/launch.md)
-    - [Library Object](schema/library.md)
 - [API Addon Object](schema/api_addon.md)
 - [API File Object](schema/api_file.md)
 - [Environment Builder Request Object](schema/api_builder_request.md)

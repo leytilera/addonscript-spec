@@ -35,10 +35,9 @@ RECOMMENDED to have a timeout of at least 5 minutes, better about 10 minutes.
 After the launch environment was build by the API instance, this endpoint will respond with a list of
 [file objects](../../schema/api_builder_response.md#files), the AddonScript 
 [schema version](../../schema/api_builder_response.md#addonscript) for the response and the 
-[launch configuration](../../schema/api_builder_response.md#launch) for this addon. These files MUST be considered
-to be part of the [files](../../schema/manifest.md#files) of the addon, from which the request was send
-and can then be installed. The launch configuration will override the 
-[local launch configuration](../../schema/manifest.md#launch) entirely.
+[launch configuration](../../concepts/instance.md#launch-configurations) for this addon. 
+These files MUST be considered to be part of the [files](../../schema/manifest.md#files) of the addon, 
+from which the request was send and can then be installed. The launch configuration will override the entirely.
 
 #### Request Body:
 
