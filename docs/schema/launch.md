@@ -19,14 +19,14 @@ this side. It will override any inherited main file for this side.
 That file MUST be specified in the [manifest](./manifest.md) of this
 addon. Setting this to an empty string will indicate, that
 there is no main file for this instance, in which case the 
-[main_class](#mainclass) MUST be explicitly configured. 
+[main_class](#main_class) MUST be explicitly configured. 
 
 ### main_class
 
 This is the main class for this instance, which will be used to launch
 the game. It will override any inherited main class for this side. 
 Setting this to an empty string will indicate, that the main class
-specified in of manifest of the [main jar file](#mainfile) should be used.
+specified in of manifest of the [main jar file](#main_file) should be used.
 
 ### arguments
 
