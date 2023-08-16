@@ -2,7 +2,7 @@
 
 The official AddonScript specification is available in the master branch of the 
 [addonscript-spec](https://git.tilera.org/AddonScript/addonscript-spec) repository
-and on [docs.addonscript.org](https://docs.addonscript.org/).
+and on [spec.addonscript.org](https://spec.addonscript.org/).
 
 ## What is AddonScript?
 
