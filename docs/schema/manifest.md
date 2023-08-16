@@ -12,8 +12,8 @@
   "repositories": [],
   "instance": false,
   "use_builder": false,
-  "launch_client": {},
-  "launch_server": {},
+  "client_patches": {},
+  "server_patches": {},
   "meta": {}
 }
 ```
@@ -69,17 +69,17 @@ If this property is not present, it defaults to `false`.
 
 This is a boolean which specifies, if this addon will use the [environment builder](../api/features/builder.md).
 Only valid if [instance](#instance) is `true`.
-If this property is not present, it defaults to `false`.
+If this property is not present, it defaults to `false`. (DEPRECATED)
 
-### launch_client
+### client_patches
 
-This is a [launch config object](launch.md) for the client, 
+This is a [patch object](patch.md) for the client, 
 which can be used to modify the launch configuration of this instance.
 Only available for [instance addons](../concepts/instance.md).
 
-### launch_server
+### server_patches
 
-This is a [launch config object](launch.md) for the server, 
+This is a [patch object](patch.md) for the server, 
 which can be used to modify the launch configuration of this instance.
 Only available for [instance addons](../concepts/instance.md).
 

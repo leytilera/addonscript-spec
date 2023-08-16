@@ -2,15 +2,13 @@
 
 Minecraft itself can be used as a [relation](../schema/relation.md) in AddonScript
 [manifests](../schema/manifest.md). This way addons MAY define, with which versions
-of Minecraft they are compatible. [Instance addons](./instance.md) MUST have
-their [launch configuration](./instance.md#launch-configurations) based on
-the launch configuration of a Minecraft version. This way it is also defined, 
-on which version of Minecraft an instance is base on. The version of Minecraft, 
-which will be used, MUST be defined either by using the 
-`included` [relational flag](./flags.md#relational-flags) with an exact Minecraft
-version or by using the `expected` [relational flag](./flags.md#relational-flags),
-while the exact version later gets defined by the user or by the `env` 
-[relational flag](./flags.md#relational-flags).
+of Minecraft they are compatible. Instances MUST be based on a Minecraft version.
+[Instance addons](./instance.md) MAY apply [patches](../schema/patch.md) to the
+Minecraft version of the instance. The version of Minecraft, 
+which will be used, MUST be defined by the [instance addon](./instance.md) by 
+using the `required` [relational flag](./flags.md#relational-flags) with either 
+an exact version or a version range, in which case the user SHOULD be asked to
+select a version, which fulfills all version restrictions in the instance.
 There is no AddonScript manifest for Minecraft, AddonScript implementations
 MUST know the [ID and namespace](#id-and-namespace) of Minecraft and how to
 handle it as specified below.
@@ -58,14 +56,14 @@ be proceeded, and warned about possible incompatibilities.
 
 AddonScript implementations, which are meant to install or launch AddonScript
 instances MUST know the launch configuration for Minecraft itself.
-For the server side, the launch configuration only consists of the server jar,
-which already includes the required libraries and a manifest with the main class.
-For the client side the launch configuration SHOULD be retrieved from the 
+For the server side, the launch configuration only consists of the server jar as 
+the main jar, which already includes the required libraries and a manifest with the 
+main class. For the client side the launch configuration SHOULD be retrieved from the 
 piston-meta API in form of the version manifest. This manifest includes information 
-about the main file, the main class, all required libraries and launch arguments.
-In contrast to launch config modifications done by [instance addons](./instance.md),
+about the main jar, the main class, all required libraries and launch arguments.
+In contrast to [patches](../schema/patch.md) done by [instance addons](./instance.md),
 arguments in the version manifest can include variables, which MUST be replaced with
 the correct values when launching the game and both, libraries and arguments, can
 be operating system or architecture specific, which MUST also be considered by
-implementations. Moreover they also provide an asset index, which SHOULD be used by
+implementations. Moreover it also provides an asset index, which SHOULD be used by
 implementations to retrieve game assets (if they are not already cached).

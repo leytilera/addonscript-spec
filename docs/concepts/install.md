@@ -6,7 +6,7 @@
 
 args:
 
-- `[location]`
+- `<location>`
 
 `move` moves the file to the given location.
 
@@ -14,7 +14,7 @@ args:
 
 args:
 
-- `[location]`
+- `<location>`
 
 `extract` can be used with zip files, to extract the contents of the zip file
 to the given location.
@@ -23,9 +23,22 @@ to the given location.
 
 args:
 
-- `[new name]`
+- `<new name>`
 
 `rename` renames the file to the new given filename.
+
+### library
+
+args:
+
+- `<namespace>`
+- `<name>`
+- `<version>`
+
+`library` can be used with jar files, to add them to the classpath of the game.
+If a library with the same `<namespace>` and `<name>`, as specified in the arguments
+of this action, was already added to the classpath, it will be replaced by this one.
+This install action can only be used by [instance addons](./instance.md).
 
 ### inject
 
@@ -33,7 +46,7 @@ args:
 into the server launch jar on server side or into the client jar on client side.
 In contrast to libraries, `inject` will not add just that file to the classpath, but
 will also overwrite classes, which are already contained in the game jar, if they
-are also in injected file. 
+are also in injected file. This install action can only be used by [instance addons](./instance.md).
 
 ## Locations
 

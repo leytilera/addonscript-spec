@@ -25,8 +25,8 @@ environment was build, and MUST be treated equal to the [files in the manifest](
 
 ### launch_client
 
-This is a [Launch Config object](./launch.md) for the client, which can be used, to modify the launch configuration of the instance.
+This is a [Launch Config object](./patch.md) for the client, which can be used, to modify the launch configuration of the instance.
 
 ### launch_server
 
-This is a [Launch Config object](./launch.md) for the server, which can be used, to modify the launch configuration of the instance.
+This is a [Launch Config object](./patch.md) for the server, which can be used, to modify the launch configuration of the instance.

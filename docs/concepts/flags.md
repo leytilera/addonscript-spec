@@ -20,29 +20,31 @@ addon manifest, including for which side it is available and for which side it i
 ## Relational flags
 
 - `required` This flag specifies, that the related addon or file is required for the addon. If the addon gets installed,
-  than any relation or file, which has this flag set, also has to be installed.
+  then any relation or file, which has this flag set, also has to be installed.
 - `optional` This flag specifies, that the related addon or file is optional for this addon. If the addon gets installed,
   the user SHOULD be able to choose, whether he wants to install the relation or file with this flag, or not.
 - `included` This flag is only valid for relations. It specifies, that the related addon is included in this one. 
   This also means, that if some addon requires the related addon, it can also be installed with this addon instead. 
   Relations with this flag MUST have an exact version specified, a version range, which includes multiple versions 
   is not allowed. If this flag is used together with `required` or `optional`, the files of the related addon will 
-  be installed like if the relation wouldn't have this flag, relations of the related addon will however be ignored 
+  be installed like if the relation wouldn't have this flag, transistive relations will however be ignored 
   since AddonScript assumes, that they are already covered by this addon.
 - `incompatible` This flag specifies for a relation, that the related addon is incompatible to this one, which means, 
   that they can't be installed together in the same instance. For a file this flag specifies, that the file can't be 
   installed on the side which has this flag set.
-- `launch` This flag is only valid for relations of [instance addons](instance.md). It specifies, that the 
-  [launch configuration](../schema/launch.md) should be inherited from the related addon (which MUST also be an
-  instance addon). The inherited launch configuration, MAY still be modified
-  using the [launch object](../schema/launch.md) of this addon or by adding libraries with the `library` flag. 
-  This flag always also implies any effect of `required`.
-- `env` This flag is only valid for relations of [instance addons](instance.md). 
+- `launch` This flag is only valid for relations and files of [instance addons](instance.md). For relations, it specifies, 
+  that the [launch patches](../schema/patch.md) from the related addon (which MUST also be an instance addon) will also be
+  applied for this addon, including those inherited by other addons using the `patch` flag or the `launch` flag. This flag
+  will also inherit the main file of the relation, if it has any. `launch` only applies for one relation. If multiple relations
+  have the `launch` flag, it only applies for the first of them, which will be installed in the instance.
+  For files, it specifies, that the file will be the main jar for this instance. `launch` only applies for one file. If multiple 
+  files have the `launch` flag, it only applies for the first of them, which will be installed in the instance.
+- `env` (DEPRECATED) This flag is only valid for relations of [instance addons](instance.md). 
   An addon, that is inheriting the launch configuration from one, which uses the 
   [environment builder](../api/features/builder.md), uses this flag to tell AddonScript, which version of the `expected` 
   addons will be requested for the environment by setting an exact [version](../schema/relation.md#version) for the relation. 
   It also tells AddonScript, which optional `expected` addons will be part of the environment and which not. 
-- `expected` This flag is only valid for relations of [instance addons](instance.md), which use the 
+- `expected` (DEPRECATED) This flag is only valid for relations of [instance addons](instance.md), which use the 
   [environment builder](../api/features/builder.md). This flag speficies, that this addon expects the related addon 
   to be [requested](../schema/api_builder_request.md#requested) as a part of the 
   [launch environment](../api/features/builder.md#build-launch-environment).
@@ -50,6 +52,7 @@ addon manifest, including for which side it is available and for which side it i
   environment, which are optional and which versions of them are valid. If an addon, which uses the 
   [environment builder](../api/features/builder.md), gets manually installed, meaning not as a dependency, the user 
   SHOULD be asked, which optional `expected` addons and which version of each `expected` addon will be requested.
-- `library` This flag is only valid for files of [instance addons](instance.md). It specifies, that this file
-  will be added as a libary to the [launch configuration](../concepts/instance.md#launch-configurations) of this
-  addon.
+- `patch` This flag is only valid for relations of [instance addons](instance.md). It specifies, that the 
+  [launch patches](../schema/patch.md) from the related addon (which MUST also be an instance addon) will be also be
+  applied for this addon. This flag is not transistive, `patch` flags of the related addon will be ignored.
+  If used in conjunction with `optional`, this flag will only take effect, if the relation will be installed.
