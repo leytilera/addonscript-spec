@@ -2,6 +2,7 @@
 
 ```json
 {
+    "side": "client",
     "main_class": "com.example.SomeClass",
     "arguments": [],
     "jvm_arguments": ["-Djvmargument"],
@@ -9,6 +10,12 @@
     "java_version": 8
 }
 ```
+
+## Required properties
+
+### side
+
+This specifies, for which side this patch should be applied. Valid values are `client`, `server` and `both`.
 
 ## Optional properties
 

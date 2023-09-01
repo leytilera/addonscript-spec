@@ -12,8 +12,7 @@
   "repositories": [],
   "instance": false,
   "use_builder": false,
-  "client_patches": {},
-  "server_patches": {},
+  "patches": [],
   "meta": {}
 }
 ```
@@ -71,16 +70,10 @@ This is a boolean which specifies, if this addon will use the [environment build
 Only valid if [instance](#instance) is `true`.
 If this property is not present, it defaults to `false`. (DEPRECATED)
 
-### client_patches
+### patches
 
-This is a [patch object](patch.md) for the client, 
-which can be used to modify the launch configuration of this instance.
-Only available for [instance addons](../concepts/instance.md).
-
-### server_patches
-
-This is a [patch object](patch.md) for the server, 
-which can be used to modify the launch configuration of this instance.
+This is an array of [patch object](patch.md) which can be used to modify t
+he launch configuration of this instance.
 Only available for [instance addons](../concepts/instance.md).
 
 ### meta

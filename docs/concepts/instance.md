@@ -36,9 +36,8 @@ Patches are applied in the following order:
    patches of that instance addon are applied according to the same order rules
 2. Patches inherited from the another instance addon using the `patch` [flag](flags.md) in the order,
    in which the addons are specified in the [relations array](../schema/manifest.md#relations)
-3. Patches done directly by the instance addon using the 
-   [client_patches](../schema/manifest.md#clientpatches) and [server_patches](../schema/manifest.md#serverpatches)
-   properties.
+3. Patches done directly by the instance addon using the [patches array](../schema/manifest.md#patches) 
+   in the order, in which they are specified in the array.
 
 ## Main file
 
