@@ -2,7 +2,7 @@
 
 ```json
 {
-    "link": ["https://example.com/file.jar"],
+    "src": ["https://example.com/file.jar"],
     "hashes": {
         "sha1": "somesha1checksum"
     },
@@ -14,7 +14,7 @@
 
 ## Required properties
 
-### link
+### src
 
 This is an array of [links](../concepts/links.md), which are pointing to the actual file. These MUST be a http(s) links.
 All of these links MUST have the same file type.

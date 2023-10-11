@@ -3,7 +3,7 @@
 ```json
 {
   "qualifier": "modfile",
-  "link": ["https://example.com/mymod.jar", "./mymod.jar"],
+  "src": ["https://example.com/mymod.jar", "./mymod.jar"],
   "flags": {},
   "install": [],
   "hashes": {
@@ -22,7 +22,7 @@ It MUST only contains lowercase alphanumeric characters and hyphens and SHOULD b
 The qualifier has to be unique to this addon version. The namespace, addon ID, version and qualifier
 can together be used to uniquely identify a file.
 
-### link
+### src
 
 This is an array of [links](../concepts/links.md), which are pointing to the actual file. All of these links must
 have the same file type. Since AddonScript treats directories and zip files equally, 
